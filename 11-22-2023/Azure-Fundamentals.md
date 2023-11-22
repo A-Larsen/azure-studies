@@ -6,9 +6,9 @@
 
 - [Describe cloud concepts](https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/)
 
-**Iaas**: Infastructure as a service
-**Saas**:  Sofware as a service
-**Paas**: Platform as a service
+- **Iaas**: Infastructure as a service
+- **Saas**:  Sofware as a service
+- **Paas**: Platform as a service
 
 ![Responsibility Model](https://learn.microsoft.com/en-us/training/wwl-azure/describe-cloud-compute/media/shared-responsibility-b3829bfe.svg)
 
