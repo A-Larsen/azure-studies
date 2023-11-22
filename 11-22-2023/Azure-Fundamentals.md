@@ -26,8 +26,9 @@ Three cloud types: Private, public, and hybrid
 
 - Used by a single entity 
 
-My assumption is that they use the word "entity" because it might be controlled by
-other means than by human interaction. Maybe bots are used?
+> note: 
+> My assumption is that they use the word "entity" because it might be controlled by
+> other means than by human interaction. Maybe bots are used?
 
 - Greater cost and fewer of the benefits of a public cloud deployment
 
@@ -48,3 +49,10 @@ other means than by human interaction. Maybe bots are used?
 ### Hybrid cloud
 
 - Uses both public and private coulds in an inter-connected environment
+
+- Allows a private cloud to surge for increased, temporary demand by deploying
+  public could resources
+
+- Can provide extra layer of security
+
+- Chose what is in the public an private cloud
