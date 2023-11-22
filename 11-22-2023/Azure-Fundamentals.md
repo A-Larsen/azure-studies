@@ -197,3 +197,59 @@ You can manage these:
 - Using APIs
 
 - Using Powershell
+
+## What is Microsoft Azure
+- supportes Saas, Paas, Iaas
+
+- serivices such as: virtual machines in cloud, website and database hosting, and
+  advanced computing services such as ai, machine learning and iot
+
+- You only pay for the computing time that you use
+
+- Provides cloud based storage
+
+- you can install a virtual machine from scratch, upload your own virtual
+  harddrive, choose from templates they provides
+
+- scalable hosting platform
+
+- Azure functions allow you to create event driven serverless applications
+
+- Azure container instances and Azure Kubernetes services allow you to deploy
+  containerized allications with fully managed services
+
+- offers fully managed relational and in-memory databases, spanning proprietory
+  and open-source engines.
+
+- microsofts cosmos DB provides support for several popular no SQL APIs.
+
+- Has machine learning and artifician inteligence services
+
+- Azures regional datacenters allow you to distribute your applications globaly.
+  This helps improve application performance
+
+- Azure portal allows you to create, configure and control all your resources
+  from a single web based interface.
+
+- Get security form the ground up, backend by a team of experts, an proactive
+  compliance trusted by enterprises, governments, and startups.
+
+## What can I do With Azuer?
+
+- Provides more than 100 services
+
+- Provides artificial intelligence (AI) and machine-learning (ML) services
+  that can naturally communicate with your users through vision, hearing, and
+  speech.
+
+## Get started with Azure accounts
+
+### Subscriptions
+- learning modules create a termporary subscription
+- Creating an Azure account will create a subscription for you. 
+- you can create additional subscription if needed.
+- you can create azure resources within each subscription
+
+Many of the learn exercises use a technology called the sandbox, which creates a
+termporary subscription that's added to your Azure account. This is no
+additional cost
