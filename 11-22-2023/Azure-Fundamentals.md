@@ -26,7 +26,6 @@ Three cloud types: Private, public, and hybrid
 
 - Used by a single entity 
 
-> note: 
 > My assumption is that they use the word "entity" because it might be controlled by
 > other means than by human interaction. Maybe bots are used?
 
@@ -56,3 +55,45 @@ Three cloud types: Private, public, and hybrid
 - Can provide extra layer of security
 
 - Chose what is in the public an private cloud
+
+```table
+| Public cloud     | Private cloud   | Hybrid cloud   |
+|==================|=================|================|
+| no captial       | organizations   | Provdes the    |
+| expenditures     | have complete   | most           |
+| to scale up      | control over    | flexability    |
+|                  | resources and   |                |
+|                  | security        |                |
+|------------------|-----------------|----------------|
+| Applications     | Data is not     | Organizations  |
+| can be quickly   | collected with  | determine      |
+| provisioned and  | other           | where          |
+| deprovisioned    | organizations'  | to run their   |
+|                  | data            | applications   |
+|------------------|-----------------|----------------|
+| Organizations    | hardware must   | Organizations  |
+| pay only for     | be purchased    | control        |
+| what they use    | for startup     | secutiry.      |
+|                  | and maintenance | compliance, or |
+|                  |                 | legal          |
+|                  |                 | requirements   |
+|------------------|-----------------|----------------|
+| organizations    | Organizations   |                |
+| dont's have      | are responsible |                |
+| complete control | for hardware    |                |
+| over resources   | maintenance and |                |
+| and security     | updates         |                |
+```
+
+### Multi-cloud
+You work with two (or more) public cloud providers and manage resources and
+security in all of your environment
+
+### Azure Arc
+- Helps you manage you cloud environment
+- could be a public, private, hybrid, or mutli-cloud environment
+
+### Azure VMware Solutions
+Lets yo run you VMware workloads in Azure with seamless integration and scalability
+
+## Describe the consumption-based model
