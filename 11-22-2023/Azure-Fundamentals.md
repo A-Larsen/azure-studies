@@ -310,7 +310,7 @@ networks.
 
 - three categories
 
-    * **Zonal services**: You pine the resourc to a specific zone (for example,
+    * **Zonal services**: You pine the resource to a specific zone (for example,
       VMs, managed disks, IP addresses).
 
     * **Zone-Redundant services**: The platform replicates automatically
@@ -319,3 +319,42 @@ networks.
     * **Non-regional services**: Services are always available from Azure
       geographies and are resilient to zone-wide outages as wel as region-wide
       outages.
+
+Even with the additional resiliency that availability zones provide, it's
+possible that an event could be so large that it impacts multiple availability
+zones in a single region. To provide even further resilience, Azure has Region
+Pairs.
+
+## Region pairs
+
+- Most regions are paired within 300 miles
+
+    * reduces likelihood of interruption that affect a region
+
+## Additional advantages of region pairs
+
+- If an extensive Azure outage occurs, one region out of every pair is
+  prioritized to make sure at least one is restored as quickly as possible for
+  applications hosted in that region pair.
+
+- Planned Azure updates are rolled out to paired regions one region at a time to
+  minimize downtime and risk of application outage
+
+- Data continues to reside within the same geography as its pair (some
+  exceptions)
+
+## Sovereign Regions
+
+- **Sovereign regions**: Instances of Azure that are isolated from the main
+  instance of Azure.
+
+- may ne3ed to use for compience or legal purposes.
+
+## Describe Azure management infrastructure
+
+- **managment infrastructure**: Azure resoureces, resource groups,
+  subscriptions, and accounts.
+
+- Understand this to help you plan your projects and products with Azure
+
+## Azure resources and resource groups
