@@ -96,4 +96,77 @@ security in all of your environment
 ### Azure VMware Solutions
 Lets yo run you VMware workloads in Azure with seamless integration and scalability
 
-## Describe the consumption-based model
+## Describe the high availability and scalability in the cloud
+
+### High availability
+You'll have to consider how long you wont your clouds uptime.
+
+SLA's are service level agreements that are different dending on the percentage of up
+time. You cannot have a 100% uptime. but you can have a 99.99 precent uptime.
+each azure service has its own SLA.
+
+- **99% downtime**: 1.68 hours per week
+- **99.99% downtime**: 10 minutes per week
+
+### Scalability
+- ability to ajust cloud resources to meet a demand
+- no overpaying for services
+- only pay for what you use
+- Vertical and horizontal scaling
+
+
+### verical scaling
+Abliity to cahnge if you need more or less computing resources (CPU, RAM, etc)
+
+### Horizontal scaling
+Ability to scale out and add additional virtual machines or containers, or scale
+down in and have less.
+
+## Descibe the benifits of reliability and predictability in the cloud
+
+### Reliability
+- **Reliability**: the ability of a system to revover from failures and continue
+  to function
+
+- cloud is decentralized. 
+
+- allows recources to be deployed in regions around the world.
+
+- In some cases, your cloud evnironment itself will automatically shift to a
+  different region for you
+
+### Predictability
+- Performance or cost predictability
+
+#### Performance
+
+- **predictablity**: autoscaling, load balancing, and high availability
+
+#### Cost
+
+- focused on predicting the cost
+
+- monitor resources for efficientcy
+
+- apply data analytics to find patterns to help plan resource deployments, p
+
+- predict future cost and adjust you resources as needed.
+
+- can use tools like Total cost Ownership (TCO) or Pricing Calculator to get an
+  estimate of protential cloud spending
+
+## Describe the benifits of security and governance in the cloud
+
+- Things like templates help ensure that all your deployed resources meet
+  corporate standards and government regulatory requirements.
+
+- Update all your deployed resources to new standards as standards change.
+
+- Infrastructure as a service provides you with physical resources but lets you
+  manage the operating systems and installed software, including patches and
+  maintenance.
+
+- Pratform as a service or software as a service patches and takes care of
+  maintenance for you
+
+- Well suited to handle things like distrobuted denial of service (DDos) attacks
