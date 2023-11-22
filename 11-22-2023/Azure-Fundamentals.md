@@ -26,6 +26,7 @@ Three cloud types: Private, public, and hybrid
 
 - Used by a single entity 
 
+> [!NOTE]
 > My assumption is that they use the word "entity" because it might be controlled by
 > other means than by human interaction. Maybe bots are used?
 
@@ -290,3 +291,31 @@ networks.
 > To ensure resiliency, a minimum of three separate availability zones are
 > present in all availability zone-enabled regions. However, not all Azure
 > Regions currently support availability zones.
+
+## Use availability zones in your apps
+
+- Create redundancy by using duplicate hardware environments. Azure can help
+  maker you app highly available through availability zones.
+
+- make high-availability by co-locating compute, storage, networking, and data
+  resources within an availability zone and replicating in other availibity
+  zones.
+
+- could be a cost to duplicating your services and transfering between
+  availability zones
+
+- mission-critical applications
+
+- primarly for: VMs, managed disks, load balancers, and SQL databases
+
+- three categories
+
+    * **Zonal services**: You pine the resourc to a specific zone (for example,
+      VMs, managed disks, IP addresses).
+
+    * **Zone-Redundant services**: The platform replicates automatically
+        across zones (for example, zone-redundant storage, SQL Database)
+
+    * **Non-regional services**: Services are always available from Azure
+      geographies and are resilient to zone-wide outages as wel as region-wide
+      outages.
