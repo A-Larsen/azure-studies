@@ -253,3 +253,40 @@ You can manage these:
 Many of the learn exercises use a technology called the sandbox, which creates a
 termporary subscription that's added to your Azure account. This is no
 additional cost
+
+## Describe Azure physical infrastructure
+The Core architectural components of Azure may be broken down into two main
+groupings: the physical infrastructure, and the managment infrastructure
+
+### Physical Infrastructure
+
+- starts with the datacenters. 
+
+- Datacenters aren't directly accessable
+
+- Grouped into Azure Regions or Azure Availability zones that are designed to
+  help you achieve resiliency for your business-critical workloads
+
+### Regions
+A **region** is a geographical area on the planet that contains at least one,
+but potentially multiple datacenters that are nearby and networked together with
+a low-latency network. Azure intelligetly assigns and controls the resources
+within each region to ensure workloads are appropriately balanced.
+
+When you deploy a resource in Azure, you'll often need to choose the region
+where you want your resourc deployed.
+
+### Availability Zones
+**Availability zones** are physically separate datacenters within an Azure
+region. Each Availability zone is made up of one or more datacenters equipped
+with independent power, cooling, and networking. An availability zone is set up
+to be an isolation boundry. If one zone goes down, the other continues working.
+Availability zones are connected through high-speed, private fiber-optic
+networks.
+
+![Azure Region](https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/5-describe-azure-physical-infrastructure)
+
+> [!IMPORTANT] 
+> To ensure resiliency, a minimum of three separate availability zones are
+> present in all availability zone-enabled regions. However, not all Azure
+> Regions currently support availability zones.
