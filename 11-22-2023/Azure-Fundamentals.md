@@ -10,7 +10,7 @@
 **Saas**:  Sofware as a service
 **Paas**: Platform as a service
 
-[Responsibility Model](https://learn.microsoft.com/en-us/training/wwl-azure/describe-cloud-compute/media/shared-responsibility-b3829bfe.svg)
+![Responsibility Model](https://learn.microsoft.com/en-us/training/wwl-azure/describe-cloud-compute/media/shared-responsibility-b3829bfe.svg)
 
 The cloud provider is always responsible for:
 
