@@ -7,3 +7,7 @@ Notes for learning microsofts azure server
 
 - [ ] [Cloud resume challenge](https://cloudresumechallenge.dev/docs/the-challenge/)
     * https://www.youtube.com/watch?v=kVO75iNc5XI
+
+- [x] Create linkedin account
+
+- [ ] ms Azure exam az900

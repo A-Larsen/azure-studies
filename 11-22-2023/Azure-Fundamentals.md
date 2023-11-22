@@ -170,3 +170,30 @@ down in and have less.
   maintenance for you
 
 - Well suited to handle things like distrobuted denial of service (DDos) attacks
+
+## Describe the benefits of manageability in the cloud
+Two types of manageability
+
+### Managment of the cloud
+In the cloud you can:
+
+- Automatically scale resources deployment based on need.
+
+- Deploy resources based on preconfigured template, removing the need for manual
+  configuration
+
+- Monitor the health of resources and automatically replace failing resources
+
+- Receive automatic alerts based on configured metrics, so you're aware of
+  performace in real time
+
+### Managment in the cloud
+You can manage these:
+
+- Through the web portal
+
+- using the command line interface
+
+- Using APIs
+
+- Using Powershell
