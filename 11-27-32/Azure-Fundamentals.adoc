@@ -554,7 +554,7 @@ single physical location in the secondary region (the region pari) using LRS.
 GRS offers durability for Azure Storage data objects of at least 16 nines
 (99.99999999999999%) over a given year.
 
-== Geo-zone-redundant storgae
+=== Geo-zone-redundant storgae
 
 GZRS combines the high availability provided by redundancy across availability
 zones with protection from regional outages provided by geo-replication. Data in
@@ -565,3 +565,16 @@ using GZRS for applications requiring maximum consistency, durability, and
 availability, excellent performance, and resilience for disaster recovery.
 GZRS is designed to provide at least 16 nines (99.99999999999999%) or durability
 of objects over a given year.
+
+=== Read access to data in the secondary region
+Geo-redundant storage (with GRS or GZRS) replicates your data to another
+physical location in the secondary region to protect against regional outages.
+However, the data is available to be read only if the customer on Microsoft
+initiates a failover from the primary to secondary region. However, if you
+enable read access to the secondary region, your data is always available, even
+when the primary region is running optimally. For read acccess to the secondary
+region, enable read-access geo-redundant storage (RA-GRS) or read-access
+geo-zone-redundant storage (RA-GZRS).
+
+IMPORTANT: Remember that the data in your secondary region may not be up-to-date
+           due to RPO.
