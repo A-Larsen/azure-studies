@@ -395,4 +395,11 @@ options that will be covered later in this module.
   network file system (NFS) in Azure Files, use the premium file shares account
   type
 
+| Premium block blobs   | Blob Storage (including    | LRS, ZRS
+                          Data Lake Storage)
+
+| Premium storage account type for block blobs and append blobs. Recommended for
+  scenarious with high transaction rates or that use smaller objects or require
+  consistently low storage latency
+
 |===         
