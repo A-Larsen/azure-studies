@@ -256,7 +256,7 @@ your other Azure services.
 - Customizable virtual networks
 - Alias records 
 
-NOTE: Im guessing that alias networks might refer to something like an AA record
+NOTE: Im guessing that alias networks might refer to something like an AAA record
 
 === Reliability and performance
 - use anycast network, so each DNS query is answered by the closest available
@@ -300,3 +300,99 @@ updates itself during DNS resolution. The alis record set points to the service
 instance, and the service instance is associated with an IP address.
 
 IMPORTANT: you cannot use Azure DNS to buy a domain name
+
+== Knowledge Check
+
+1. Q: Which Azure Virtual Machine feature staggers updates across VMs based on
+   their update domain and fault domain.
+
+1. A: Availability sets
+
+2. Q: Which Azure service allows users to use a cloud hosted version of Windows
+   from any location and connect from most modern browsers?
+
+2. A: Azure Virtual Desktop
+
+// Describe Azure storage services
+== Describe Azure strorage accounts
+
+offer:
+- massively scalable object store for data objects
+- disk storage for azure virtual machines
+- file system service for the cloud
+- messing store for reliable messaging
+- noSQL store
+
+- *Azure Blob Storage*: An object storage solution that you can use to store
+  massive amounts of unstructured data, such as text or binary data.
+
+blob storage is ideal for serving images or documents directly to a browser,
+stroing data for archives or distributes access, streaming video and audio, and
+disaster recover scenarios.
+
+azure file storage offers fully managed file shares in the cloud. shares are
+accessable using industrial standard network protocols.
+
+mount azure file shares is just like connecting to shares on your local network.
+
+azure disk storage provides disks for virtual machines and applications to
+access and use as they need.
+
+Azure offers both solid state drivers, and conventional hard drives
+
+Azure table storage offers a no SQl data store for key value pairs, using large
+scale sets.
+
+You can use *azure table storage* to store petabytes of semistructured data and
+keep your cost down.
+
+*Azure que storage* provides a syncronous message queing for communication
+between application components. Whether they are running in the cloud, on the
+desktop, on premesis, or on moblie devices
+
+there are thee *Azure storage tiers* that you can use to balance your cost, hot,
+cool, and archive
+
+=== Hot Storage tier
+optimized for storing data that is accessed frequently, such as images for your
+website
+
+=== Cold Stroage tier
+optimized for data that is infrequently accessed, and stored for at least thirty
+days. Such as customer invoices.
+
+=== Archive storage tier
+Appropriate for data that is rarely accessed. strored for at least 180 days.
+Such as long term backups.
+
+A storage account provides a unique namespace for your Azure Storage data that's
+accesible from anywhere in the world over HTTP or HTTPs. Data in this account is
+secure, highly availale, durable, amd massively scalable.
+
+When you create your storage account, you'll start by picking the storage
+account type. The type of account determines the storage services and redundancy
+options and has an impact on the use cases. Below is a list of redundancy
+options that will be covered later in this module.
+
+- Locally redundant storage (LRS)
+- Geo-redundant storage (GRS)
+- Read-access geo-redundant storage (RA-GRS)
+- Zone-redundant storage (ZRS)
+- Geo-zone-redundant storage (GZRS)
+- Read-access geo-zone-redundant stroage (RA_GZRS)
+
+[%header, cols="1, 3, 1, 5"]
+|===
+| Type                  | supported services         | Redundancy Options | Usage
+
+| Strandard general-    | Blob Storage (including    | LRS, GRS, RA-GRS  
+  purpose v2              Data Lake Storage),          ZRS, GZRS, RA-GZRS
+                          Queue Storage, Table
+                          Storage, and Azure Files
+
+| Standart storage account type for blobs, file shares, queues, and tables.
+  Recommended for most scenarios using Azure Storage. If you want support for
+  network file system (NFS) in Azure Files, use the premium file shares account
+  type
+
+|===         
