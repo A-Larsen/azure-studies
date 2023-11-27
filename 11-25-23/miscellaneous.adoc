@@ -1,0 +1,2 @@
+== Links
+- https://stackoverflow.com/questions/2663456/how-to-write-a-signal-handler-to-catch-sigsegv[using <signal.h> to catch segfaults]

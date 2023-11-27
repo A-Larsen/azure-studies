@@ -1,0 +1,89 @@
+== Sections of the man pages
+
+[%header, cols="1,1"]
+|===
+| Section | Contents
+| 1       | User-level commands and applications
+| 2       | system calls and kernel error codes
+| 3       | Library calls
+| 4       | Device drivers and network protocols
+| 5       | Standard file formats
+| 6       | Games and demonstrations
+| 7       | Miscellaneous files and documents
+| 8       | System administration commands
+|===
+
+*man* [section]  _title_
+
+*section* (optional):: section number
+*title*: usually a command, device, filename, or name of a library routine
+
+*man* -k _keyword_
+
+prints a list of man pages that have `keyword` in their on-lines synopses.
+
+Man pages output from whatever your PAGER environment variable is set to.
+Usually it's usually the program called *more* or the program called *less*.
+
+
+== Storage of man pages
+- *nrof* is the source code for man pages
+
+- stored in directories under _/usr/share/man_ and compressed with *gzip* to
+  save space. The `man` command knows how to decrompress them on the fly
+
+`manpath`:: find the current default search path
+
+use `which` or `whereis`, or `locate` to see if a program is installed. In linux
+you'll need to install the *mlocate* package to use `locate`.
+
+It is possible to find out which package a particular file belongs to:
+
+.ubuntu
+[source, sh]
+----
+dpkg-query -S /etc/apache2
+----
+
+canonical name:: trying to figure out the name of the pacakage form something
+like the command name.
+
+== Installing form source
+usual install sequence
+
+1. `./configure`
+2. `make`
+3. `sudo make install`
+
+you'll often need to tweak the build configuration, so use `./configure --help`
+to see the options available for each particular package. Another useful
+`configure` option is `--prefix=_directory_`, which lets you compile the
+software for installation somewhere other than `/usr/local`, which is used by
+default.
+
+== Installing from web script
+Cross-platform software bundles increasingly offer an expedited installation
+process that's driven by a shell script you download from the web with `curl`,
+`fetch`, or `wget`.
+
+.example
+[source, sh]
+----
+curl -o /tmp/saltboot -sL https://bootstrap.saltstack.com
+sudo sh /tmp/saltboot
+----
+
+The bootstrap script investigates the local environment, then downloads,
+installs and configures and appropriate version of the software. This type of
+installation is particularly common in cases where the processs itself is
+somewhat complex, but the vendor is highly motivated to make things easy for
+users. (Another good example is RVM; see page 232)
+
+this is not good
+
+----
+curl -L https://badvender.com | sudo sh
+----
+
+The root shell still runs even if `curl` outputs a partial script and then fails
+-- say because of a transient network glitch

@@ -11,3 +11,5 @@ Notes for learning microsofts azure server
 - [x] Create linkedin account
 
 - [ ] ms Azure exam az900
+
+- [ ] figure out time period (scope) for learning azure
