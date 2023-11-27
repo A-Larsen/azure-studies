@@ -381,25 +381,38 @@ options that will be covered later in this module.
 - Geo-zone-redundant storage (GZRS)
 - Read-access geo-zone-redundant stroage (RA_GZRS)
 
-[%header, cols="1, 3, 1, 5"]
+[%header, cols="2, 3, 1, 5"]
 |===
-| Type                  | supported services         | Redundancy Options | Usage
+| Type                  | Supported services         | Redundancy Options | Usage
 
-| Strandard general-    | Blob Storage (including    | LRS, GRS, RA-GRS  
-  purpose v2              Data Lake Storage),          ZRS, GZRS, RA-GZRS
-                          Queue Storage, Table
-                          Storage, and Azure Files
+//--------------------------
+| Strandard general-      
+  purpose v2              
+                        
+| Blob Storage (including  
+  Data Lake Storage),      
+  Queue Storage, Table
+  Storage, and Azure Files
+
+| LRS, GRS, RA-GRS  
+  ZRS, GZRS, RA-GZRS
 
 | Standart storage account type for blobs, file shares, queues, and tables.
   Recommended for most scenarios using Azure Storage. If you want support for
   network file system (NFS) in Azure Files, use the premium file shares account
   type
+//--------------------------
 
-| Premium block blobs   | Blob Storage (including    | LRS, ZRS
-                          Data Lake Storage)
+| Premium block blobs       
+                        
+| Blob Storage (including
+  Data Lake Storage)
+
+| LRS, ZRS
 
 | Premium storage account type for block blobs and append blobs. Recommended for
   scenarious with high transaction rates or that use smaller objects or require
   consistently low storage latency
 
+//--------------------------
 |===         
