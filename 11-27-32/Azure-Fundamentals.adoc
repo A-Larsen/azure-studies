@@ -108,7 +108,7 @@ are a few ways to maximize the resiliency of your VPN gateway.
 
 By default, VPN gateways are deplayed as two instances in an active/standby
 configuration, even if you only see one VPN gateway resource in Azure. When
-planned maintenance or unplanned distruption affects the active instance, thecurl --connect-timeout 5 http://$IPADDRESS
+planned maintenance or unplanned distruption affects the active instance, the
 standby instance automatically assumes responsibility for connections without
 any user intervention. Connections are interupted during this failover, but
 they're typically restored within a few seconds for planned maintenance within
