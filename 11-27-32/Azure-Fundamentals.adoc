@@ -381,7 +381,7 @@ options that will be covered later in this module.
 - Geo-zone-redundant storage (GZRS)
 - Read-access geo-zone-redundant stroage (RA_GZRS)
 
-[%header, cols="2, 3, 1, 5"]
+[%header, cols="2,3,1,5"]
 |===
 | Type                  | Supported services         | Redundancy Options | Usage
 
@@ -400,7 +400,7 @@ options that will be covered later in this module.
 | Standart storage account type for blobs, file shares, queues, and tables.
   Recommended for most scenarios using Azure Storage. If you want support for
   network file system (NFS) in Azure Files, use the premium file shares account
-  type
+  type.
 //--------------------------
 
 | Premium block blobs       
@@ -412,7 +412,28 @@ options that will be covered later in this module.
 
 | Premium storage account type for block blobs and append blobs. Recommended for
   scenarious with high transaction rates or that use smaller objects or require
-  consistently low storage latency
+  consistently low storage latency.
 
 //--------------------------
+
+| Premium file shares
+
+| Azure Files
+
+|LRS, ZRS
+
+| Premium storage account type for file shares only. Recomended for enterprise
+  or high-performance scale applications. Use this account type if you want a
+  storage account that supports both Server Message Block (SMB) and NFS file
+  shares.
+
+//--------------------------
+
+| Premium page blobs
+
+| Page blobs only
+
+| LRS
+
+| Premium storage account type for page blobs only.
 |===         
