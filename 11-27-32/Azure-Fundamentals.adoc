@@ -1,0 +1,300 @@
+= Azure Fundamentals
+
+== Exercise - Configure network access
+
+to list all vms
+
+[source, bash]
+----
+az vim list
+----
+
+get your VM's ip address and store the result as a variable
+
+[source, bash]
+----
+IPADDRESS="$(az vm list-ip-addresses \
+    --resource-group learn-5c7548c4-42a3-4b2f-aa2d-c0ebd0b3bd60  \
+    --name my-vm \
+    --query "[].virtualMachine.network.publicIpAddresses[*].ipAddress"  \
+    --output tsv)"
+----
+
+
+creaate netork security rule
+
+[source, bash]
+----
+az network nsg rule create \
+    --resource-group learn-5c7548c4-42a3-4b2f-aa2d-c0ebd0b3bd60 \
+    --nsg-name my-vmNSG \
+    --name allow-http \
+    --protocol tcp 
+    --priority 100 \
+    --destination-port-range 80 \
+    --access Allow
+----
+
+get list of rules
+
+[source, bash]
+----
+az network nsg rule list \
+    --resource-group learn-5c7548c4-42a3-4b2f-aa2d-c0ebd0b3bd60 \
+    --nsg-name my-vmNSG \
+    --query '[].{Name:name, Priority:priority, Port:destinationPortRange, Access:access}' \
+    --output table
+----
+
+get webpage
+
+[source, bash]
+----
+curl --connect-timeout 5 http://$IPADDRESS
+----
+
+== Describe Azure virtual private networks
+
+=== VPN gateways
+A VPn gateway is a type of virtual network gateway. Azure VPN Gateway instances
+are deployed in dedication subnet of the virtual network and enable the
+following connectivity:
+
+- Connect on-premises datacenters to virtual netowrks through a sit-to-site
+  connection
+
+- Connect individual devices to other virtual networks through a
+  network-to-network connection
+
+All data transfer is encrypted inside a private tunnel as it crosses the
+internet. You can deploy only one VPN gateway in each virtual network. However,
+you can use one gateway to connect to multiple locations, which includes other
+virtual networks or on-premises datacenters.
+
+When setting up a VPN gateway, you must specify the type of VPN - either policy
+based or route-based. The primary distinction between these two types is how
+they determine which traffic needs encryption. In Azure, regardless of the VPN
+type, the mothod of authentication employed is a pre-shard key.
+
+- *Policy-based VPN gateways* specify statically the IP address of packets that
+  should be encrypted through each tunnel. This type of device evaluates every
+  data packet against those sets of IP addresses to choose the tunnel where that
+  packet is going to be sent through.
+
+NOTE: is this static ips? static ips do not change
+
+- *In Route-based gateways*, IPSec tennels are modeled as a network interface or
+  virtual tunnel interface. IP routing (either static routes or dynamic routing
+  protocols) decides which one of these tunnel interfaces to use when sending
+  each packet. Route-based VPNs are the preferred connection method for
+  on-premeses devices. They're more resillient to topology changes such as the
+  creation of new subnets.
+
+use a route-based VPN gateway if you need any of the following types of
+connectivity:
+
+- Connections between virtual networks
+- Point-to-site connetions
+- Multisite connections
+- Coexistence with an Azure ExpressRoute gateway
+
+
+=== High-availability scenarios
+If you're configuring a VPN to keep your information safe, you also want to be
+sure that it's a highly available and fault tolerant VPN configuration. There
+are a few ways to maximize the resiliency of your VPN gateway.
+
+==== Active/standby
+
+By default, VPN gateways are deplayed as two instances in an active/standby
+configuration, even if you only see one VPN gateway resource in Azure. When
+planned maintenance or unplanned distruption affects the active instance, thecurl --connect-timeout 5 http://$IPADDRESS
+standby instance automatically assumes responsibility for connections without
+any user intervention. Connections are interupted during this failover, but
+they're typically restored within a few seconds for planned maintenance within
+90 seconds for unplanned disruptions.
+
+==== Active/active
+With the introduction of support for the BGP routing protocol, you can also
+deply VPN gateways in an active/active configuration. In this configuration, you
+assign a unique public IP address to each instance. You then create seperate
+tunnels from the on-premises device to each IP address. You can extend the high
+availability by deploying an additional VPN device on-premises.
+
+==== ExpressRoute failover
+
+Another high-availability option is to configure a VPN gateway as a secure
+failover path for ExpressRoute connections. ExpressRoute circuits have
+resiliency built in. However, they aren't immune to physical problems that
+affect the cables delivering connectivity or outages that affect the complete
+ExpressRoute location. In high-availability scenarios, where there's risk
+associated with an outage of an ExpressRoute circuit, you can also provision a
+VPN gateway that uses that internet as an alternative method on connectivity. In
+this way, you  can ensure there's always a connection to the virtual networks.
+
+==== Zone-redundant gateways
+
+In regions that support availability zones, VPN gateways and ExpressRoute
+gateways can be deployed in a zone-redundant configuration. This configuration
+brings resiliency, scalability, and higher availability to virtual network
+getways. Deploying gateways in Azure availability zones physically and logically
+separates gateways within region while protecting your on-premises network
+connectivity to Azure from zone-level failures. These gateways require different
+gateway stock keeping units (SKUs) and use Standard public IP addresses instead
+of Basic public IP address.
+
+
+== Describing Azure ExpressRoute
+
+- *ExpressRoute Circuit*: lets you extend your on-premises networks into the Microsoft cloud over a
+  private connection, with the help of a connectivity provider.
+
+allows you to connnect offices, datacenter, or oter facilities to the Microsoft
+cloud. Each location would have its own ExpressRoute circuit.
+
+Connectivity can be from an any-to-any (IP VPN) network, a point-to-point
+Ethernet network, or a virtual cross-connection though a connectivity provider at
+a colocation facility. ExpressRoute connection don't go over the public
+Internet. This allos ExpressRoute connections to offer more reliability, faster
+speeds, consistent latencies, and higher security than typical connections over
+the internet.
+
+- *Colocatoin*: when organizations place their own serviers and other essential
+  computing hardware for data storage in space rented in a physical data center
+  owned and/or operated by a third party.
+
+=== Features and benigits of ExpressRoute
+
+There are several benifits of using ExpressRoute as the connection service
+between Azure an on-premises networks.
+
+- Connectivity to Microsoft cloud services across all regions in the
+  geopolitical region.
+
+- Global connectivity to Microsoft services across all regions with the
+  ExpressRoute Global Reach.
+
+- Dynamic routing between your network and Microsoft via Border Gateway Protocol
+  (BGP)
+
+- Built-in redendancy in every peering location for higher reliability
+
+=== Connectivity to Microsoft cloud services
+
+ExpressRoute enables direct access tot he following services in all regions:
+
+- Microsoft 365
+- Microsoft Dynamics 365
+- Azure compute services, such as Azure Virtual Machines
+- Azure cloud services, such as Azuer Cosmos DB and Azure Storage
+
+=== Global conectivity
+you can enable ExpressRoute Global to exchange data across your on-premises
+sites by connecting your ExpressRoute circuits.
+
+=== Dynamic routing
+ExpressROute uses the BGP. BGP is used to exchange routes between on-premises
+networks and resources running in Azure. This protocol enables dynamic routing
+between your on-premises network and services running in the microsoft cloud.
+
+=== Built-in redundancy
+
+Each connectivity provider uses redundant devices to ensure that connections
+established with Microsoft are highly availabile. You can configure multiple
+circuits to complement this feature.
+
+=== ExpressROute connectivity models
+
+ExpressRoute supports four modesl tha you can use to conect your on-premises
+network to the Microsoft cloud:
+
+- cloudExchange colocation
+- Point-to-point Ethernet connection
+- Any-to-any connection
+- Directly from ExpressRoute sites
+
+=== Co-location at a cloud exchange
+Co-location refers to your datacenter, office, or other facility being
+physcially co-locatied at a cloud exchange, such as an ISP. If your facility is
+co-located at a cloud exchange, you can request a virtual cross-connect to the
+Microsoft cloud.
+
+=== Point-toPoint Ethernet connection
+Point-to-point ethernet connection refers to using a point-to-point connection
+to connect your facility to the Microsoft cloud.
+
+=== Any-to-any networks
+With any-to-any connectivity, you can intergrate your wide are network (WAN)
+with Azure by providing connections to your offices and datacenter. Azure
+integrates with your WAN connection to provide a connection like you would have
+between your datacenter and any branch offices.
+
+=== Directly form ExpressRoute sites
+You cannot directly connect into the Microsoft's global network at a peering
+location strategically distributed across the wold. ExpressRoute Direct provides
+dual 100 Gbps or 10-Gbps connectivity. which supports Active/Active connectivity
+at scale.
+
+=== Security considerations
+With ExpressRoute, your data doesn't travel of the public internet, so it's not
+exposed to the potential risk associated with internet connumications.
+ExpressRoute is a private connection from your on-premises infrastructure to
+your Azure infrastructure. Even if you have an ExpressRoute connection, DNS
+queries, certificate revocation list checking, and Azure Content Delivery
+Network requests are still sent over the public internet.
+
+== Describe Azure DNS
+Azure DNS is a hosting service for DNS domains that provides name resolution by
+using Microsoft Azure infrastructure. By hosting your domains in Azure, you  can
+manage you DNS records using the same credentials, APIs tools, and biling as
+your other Azure services.
+
+=== Benifist of Azure DNS
+- Reliability and performance
+- Security
+- Ease of Use
+- Customizable virtual networks
+- Alias records 
+
+NOTE: Im guessing that alias networks might refer to something like an AA record
+
+=== Reliability and performance
+- use anycast network, so each DNS query is answered by the closest available
+  DNS server
+
+- high availability
+
+=== Security
+Azure DNS is based on Azure Resource Manager, which provides features sush as
+
+- Azure role-based access control (Azure RBAC) to control who has access to
+  specific actions for your organization.
+
+- Activity logs to monitor how a user in your organization modified a resource
+  or to find an error when troubleshooting
+
+- Resource locking to lock a subscription, resource group, or resource. Locking
+  prevents other users in your organization form accidently deleting or
+  modifying critical resources
+
+=== Ease of use
+
+- Procide DNS for your external resources as well
+
+- Management in Azure portal
+
+- Applications that require automated DNS managment can integrate with the
+  service by using the REST API and SDKs.
+
+=== Customizable virtual networks with private domains
+ Azure DNS also supports private DNS domains. This feature allows you to use
+ your own custom domain names in your private virtual networks, rather than
+ being stuck with the Azure-provided names.
+
+=== Alias records
+Azure DNS also supports alias record sets. You can use an alias record set to
+refer to an Azure resource, such as an Azure public IP address, an Azure Traffic
+Manager profile, or an Azure Content Delivery Network (CDN) endpoints. If the IP
+address of the underlying resource changes, the alias record set seamlessly
+updates itself during DNS resolution. The alis record set points to the service
+instance, and the service instance is associated with an IP address.
