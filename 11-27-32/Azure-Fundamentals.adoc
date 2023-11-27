@@ -287,9 +287,9 @@ Azure DNS is based on Azure Resource Manager, which provides features sush as
   service by using the REST API and SDKs.
 
 === Customizable virtual networks with private domains
- Azure DNS also supports private DNS domains. This feature allows you to use
- your own custom domain names in your private virtual networks, rather than
- being stuck with the Azure-provided names.
+Azure DNS also supports private DNS domains. This feature allows you to use
+your own custom domain names in your private virtual networks, rather than
+being stuck with the Azure-provided names.
 
 === Alias records
 Azure DNS also supports alias record sets. You can use an alias record set to
