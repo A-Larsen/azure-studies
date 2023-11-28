@@ -561,3 +561,12 @@ alert you when attack are happening
 ==== Application
 - Store sensitive application secrets in a secure storage medium
 - Make security design requirement for all applications
+
+==== Data
+
+in almost all cases, attackers are after data:
+
+- stored in database.
+- stored on disk inside virtual machines
+- stored in software as a service (SaaS) applications (such as Office 365)
+- Managed through cloud storage
