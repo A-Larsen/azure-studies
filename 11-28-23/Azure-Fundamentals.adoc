@@ -1,0 +1,355 @@
+== Describe Azure storage Devices
+
+=== Azure Migrate
+Azure Migrate is a service that helps you migrate from an on-premises
+environment to the cloud. Azure Migrate 
+
+provides:
+
+- *Unified migration platform*: A single port to start run, and track your
+  migration to Azure
+
+- *Range of tools*: A range of tools for assessment and migration. Azure Migrate
+  tools include Azuure Migrate:Discovery and assessment and Azure
+  Migrate:Server Migrate. Azure Migrate also inegrates with other Azure services
+  and tools, and with independent software vendor (ISV) offering.
+
+- *Assessment and migration*: In the Azure Migrate hub, you can access and
+  migrate your on-premises infrastructure to Azure.
+
+=== Integrated tools
+In addition to working with tools from ISVs, the Azure Migrate hub also includes
+the following tools to help with migration:
+
+- *Azure Migrate: Disovery and assessment*. Discover and assess on-premises
+  servers running VMWare, Hyper-V, and physical servers in preparation for
+  migration to Azure.
+
+- *Azure Migrate: Server Migration*. Migrate VMware VMs, Hyper-V VMs, physical servers,
+  other virtualized servers, and public cloud VMs to Azure.
+
+- *Data Migration Assistant*. Data Migration Assistant is a stand-alone tool to
+  assess SQL Servers. It helps pinpoint potential problems blocking migration.
+  It identifies unsupported features, new features that can benifit you after
+  migration, and the right path for database migration.
+
+- *Azure App Service migration assistant*. Azure App Service migration assistant
+  is a standalone tool to assess on-premises websites for migration to Azure App
+  Service. Use Migration Assistant to migrate .NET and PHP web apps to Azure.
+
+- *Azure Data Box*. Use Azure Data Box products to move large amounts of offline
+  data to Azure
+
+=== Azure Data Box
+Azure Data Box is a physical migration service that help transfer large amounts
+of data in a quick inexpensive, and reliable way. The secure data transfer is
+accelerated by shipping you a proprietary Data Box storage device that has a
+maximum usable storage copacity of 80 terabytes. The Data Box is transported to
+and from you datacenter via a regional carrier. A rugged case protects and
+secures the Data Box from damage during transit.
+
+You can order the Data Box device via the Azureportal to import or export data
+from Azure. Once the device is received, you can quickly set it up using the
+local web UI and connect it to your network. Once you're finished transferring
+the data (either into or out of Azure), simply return the Data Box. If you're
+transferrring data into Azure, the data is automattically uploaded once
+Microsoft receives the Data Box back. The entire process is tracked end-to-end
+by the Data Box service in the Azure portal.
+
+==== Use cases
+Data Box is ideally suited to transfer dat sizes larger than 40 TBs in scenarios
+with no to limited network connectivity. The data movement can be on-time,
+periodic, or an initial bulk transfer followed by periodic transfers.
+
+Here are the various scenarios where Data Box can be used to import data to
+Azure.
+
+- Onetime migration - when a large amount of on-pemises data is moved to Azure.
+
+- Moving a media library from offline tapes into Azure to create an online media
+  library.
+
+- Migrating you VM farm, SQL server, and applications to Azure.
+
+- Moving historical data to Azure for in-depth analysis and reporting using
+  HDInsight
+
+- Periodic uploads - when large amount of data is generated periodically and
+  needs to be moved to Azure.
+
+  Here are the various scenarios where Data Box can be used to export data from
+  Azure:
+
+  - Disaster recovery - when a copy of the data from Azure is restored to an
+    on-premises network. In a typical disaster recovery scenario, a large amount
+    of Azure data is exported to a Data Box. Microsoft then ships this Data Box,
+    and the data is restored on your premises in a short time.
+
+- Security reuirements - when you need to be able to export data out of Azure
+  due to government or security requirements
+
+- Migrate back to on-premises or to another cloud service provider - when you
+  want to move all the data back to on-premises, or to another cloud service
+  provider, export dat via Data Box to migrate the workloads.
+
+Once the data from your import order is uploaded to Azure, the disks on the
+device are wiped clean in accordance with NIST 800-88r1 standards. For export
+order, the disks are erased once the device reaches the Azure datacenter.
+
+== Identify Azure file movement options
+=== AzCopy
+
+AzCopy is a command-line utility that you can use to copy blobs or files to or
+from your storage account. With AzCopy, you can upload files, download files,
+copy files between storage accounts, and even synchonize files. AzCopy can even
+be configured to work with other cloud providers to help move files back and
+forth between clouds.
+
+IMPORTNAT: Synchonizing blobs or files with AzCopy is one-Direction
+           synchronization. When you synchronize, you designated the source and
+           destination, and AzCopy will copy files or blobs in that direction.
+           It doesn't synchronize bidirectionally based on timestamps or other
+           metadata.
+
+=== Azure Storage Explorer
+
+Azure Storage Explorer is a standalone app that provides a graphical interface
+to manage files and blobs in your Azure Storage Account. It work on Windows,
+macOS, and Linux operating systems and uses AzCopy on the backend to perform all
+the file and blob managment tasks. With storage Explorer, you can upload to
+Azure, download from Azure, or move between storage accounts.
+
+=== Azure File Sync
+
+Azure File Sync is a tool that lets you centralize your file shares in Azure
+Files and keep the flexability, performance and  compatibility of a Windows file
+server. It's almost like turning your Windows file server into a miniture
+content delivery network. Once you install Azure File Sync on you local Windows
+server, it will automatically stay bi-directionally synced with your files in
+Azure.
+
+With Azure File Sync, you can:
+
+- Use any protocol that's available on Windows Server to access your data
+  locally, including SMB, NFS, and FTPS.
+
+- Have as many caches as you need across the world.
+
+- Replace a failed local server by installing Azure File Sync on a new server in
+  the same datacenter.
+
+- Configure cloud tiering so the most frequently accessed files are replaced
+  locally, while infrequently accessed files are kept in the cloud until
+  requested.
+
+== Describe Azure directory services
+
+- Microsoft Entra ID enable you to access Microsoft cloud applicatoins and ones
+  you develop.
+
+- Entra ID can also help maintain on-premises Active directory deployment
+
+- provide iddentity and accent managemnt service
+
+- control the identity accounts
+
+- available globally
+
+- on-premesis doesn't monitor sign attempts
+
+- can help detect suspicious sign-in attempts at no extra cost
+
+=== Who uses Microsoft Entra Id
+
+- *IT administrators*
+- *App developers*. (such as SSO functionallity)
+- *Users*. maintance self service password reset
+- *Online service subscribers*. Microsoft products and stuff[,W]
+
+=== What does Microsoft Entra ID do
+
+- *Authentication*
+    * identify access to applications and resources
+    * self-service password reset
+    * multifactor authentication
+    * custom list of banned passwords
+    * smart lockout services
+
+- *Signle sign-on (SSO)*
+    * one username and password multiple applications
+    * a sinlgle identity is tied to a user
+    * access modifications are tied to identity
+
+- *Application managment*
+    * cloud and on-premises apps
+    * has Proxy, SaaS apps, My Apps portal
+
+- *Device managment*
+    * supports the registration of devices
+
+    * devices can managed through tools like Microsoft Intune
+
+    * allows device based conditional access policies to restrict attempts to
+      only those comming from known devices, regardless of the requesting user
+      account
+
+=== Can I connect my on-premiss active directory (AD) with Microsoft Entra ID?
+
+yes, if you connect Active Directory with Microsoft Id, enabling consistent
+identity 
+
+NOTE: I think it would have one identity set
+
+if you don't conect them, you would have to maintain two identity sets.
+
+you can connnect them with microsoct Entra Connect.
+
+Microsoft Entra Connect synchronizes user identities between on-premises Active
+Directory and Microsoft Entra ID. It synchronizeds changes between both identity
+systems, so you can can use features like SSO, mutifactor authentication, and
+self-service password reset under both systems.
+
+=== What is Microsoft Enrta Domain Services?
+- provides managed servces such as domain join, group policy, lightweight
+  directory access protocol (LDAP), and kerberos/NTLM authentication. 
+
+- no need to deplay, manage, and patch domain controllers (DCs) in the cloud.
+
+A Entra Domain Services managed domain lets you run legacy applications in the
+cloud that can't use modern authentication methods, or where you don't want
+directory lookups to always go back to an on-premises AD DS environment. You can
+lift and shift those legacy applications from your on-premises environment into
+a managment domain, without needing to manage the AD DS environment in the
+cloud.
+
+Entra Domain Services Integrates with your existing Entra tenant. This
+integration lets users sign into services and applications connected to the
+managed domain using their existing credentials. You can also use existing
+groups and user accounts to secure access to resources. These features provide a
+smoother lift and shift of on-premises resources to Azure.
+
+=== How does Microsoft Entra Domain Services work
+
+When you define a Microsoft Entra Domain Service managed domain, you define a
+unique namespace. This namespace is the domain name. Two WIndows Server domain
+controllers are then deployed into your selected Azure region. This deployment
+of DCs is known as a replica set.
+
+You don't need to manage, configure, or update these DCs. The Azure platform
+handles the DCs as part fo the managed domain, including backups and ancryption
+at reset using Azure Disk Encryption.
+
+=== Is information synchronized?
+
+A managed domain is configured to perform a one-way synhronization from
+Microsoft Entra Id to Microsoft Entra Domain Services. You can create resources
+directly in the managed domain, but they aren't synchronized back to Microsoft
+Entra ID. In a hybrid environment with an on-premises AD DS environment,
+Microsoft Entra Connect synchronized identity with Microsoft Entra ID, which is
+then synchronized to the managed domain.
+
+Applications, services, and VMs in Azure that connect to the managed domain can
+then use common Microsoft Entra Domain Service features such as domain join,
+group policy, LDAP, and Kerberos/NTLM authentication.
+
+= Describe Azure authentication methods
+
+some authentication methods Azure supports:
+- standard passwords
+- single sign-on (SSO)
+- multifactor authentication (MFA)
+- passwordless
+
+- new authentication solutions provides both security and convenience?
+
+=== What's single sign-on?
+- sign in once and use those credentials accross multiple resources and
+  applications from different prociders
+
+For SSO to work, the different applications and providers must trust the initial
+authenticator.
+
+=== What's multifactor authentication?
+
+Multifactor authentication is the process of prompting a user for an extra form
+(or factor) of identification during the sign in process.
+
+Multifactor authentication provides additional security for your identities by
+requiring two or more elements to fully authenticate. These elements fall into
+three categories:
+
+- Something the user knows - this might be a challenge question
+
+- something the user has - this might be a code that's sent to the user's mobile
+  phone
+
+- something the user is - this is typically some sort of biometric property,
+  such as fingerprint or face scan.
+
+=== What's Microsoft Entra multifactor authentication
+
+- provides mutlifactor authentication capabilities.
+
+- enables users to choose an additional form of authentication during sign-in
+  such as a phone call or mobile app notification
+
+=== What's passwordless authentication?
+
+Passwordless authentication needs to be set up on a device before it can work.
+For example, your computer is something you have. Once it's been registered or
+enrolled, Azure now knows that it's associated with you. Now that the computer
+is known, once you provide something you know or are (such as PIN or
+fingerprint), you can be authenticated without using a password.
+
+Microsoft glonal Azure and Azure Government offer the following passwordless
+authentication options.
+
+- Windows hello for business
+
+- Microsoft Authenticator app
+
+- FID02 security keys
+
+== Windows Hello for Business
+
+Windows Hello for Business is ideal for information workers that have their own
+designated Windows PC. The biometric and PIN credentials are directly tied to
+the user's PC, which prevents acces from anyone other than the owner. With
+public key infrastructure (PKI) integration and built-in support for single
+sign-on (SSO), Windows Hello for Business provides a convenient method for
+seamlessly accessing corporate resources on-premises and in the cloud.
+
+two factor authentication
+
+=== FIDO2 security keys
+
+The FIDO (Fast IDentity Online) Alliance helps to promote open authentication
+standards and reduce the use of passowrds as a form of authentication. FIDO2 is
+the latest standard that incorportate the web authentication (WebAuthn)
+standard.
+
+FIDO2 security keys are an unphishable standards-based passwordless
+authentication method that can come in any form factor. Fast Identity Online
+(FIDO) is an open standard for passwordless authentication. FIDO allows users
+and organizations to leverage the standard to sign-in to their resources without
+a username or password by using an external security key or a platform key built
+into a device.
+
+Users can register and then select a FIDO2 security key at the sign-in interface
+as their main means of authentication. These FIDO2 security keys are typically
+USB devices, but could also use Bluetooth or NFC. With a hardware device that
+handles the authentication, the security of an account is increased as there's
+no password that could be exposed or guessed.
+
+== Describe Azure external identities
+
+*Entra External ID* refers to all the ways you can securely interact with users
+outside of your organization. External identities may soud similar to
+single-sign-on. With External Identities, external users can "bring their own
+identities". Whether tehy have a corporate or government-issued digital
+identity, or an unmanaged social identity like Google or Facebook, they can use
+their own credentials to sign in. The external user's identity provider manages
+their identity, and you manage access to your apps with Microsoft EntraID or
+Azure AD B2C to keep your resources protected.
+
+The following capabilities make up External identities:
