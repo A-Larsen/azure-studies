@@ -662,10 +662,62 @@ Java, Node.js, Python, PHP, and Ruby.
   (for example, images for your website)
 
 - *Cool access tier*: Optimized for data that is infrequently accessed and
+  stored for at least 90 days. (for example, invoices for your customers)
+
+- *Cold access tier*: Optimized for storing data that is infrequently accessed and
   stored for at least 90 days.
 
 - *Archive access tier*: Appropriate for data that is rarely accessed and stored
   for at least 180 days, with flexable latency requirements (for example,
   long-term backups)
 
-The following consideration apply to the different access tiers:
+The following considerations apply to the different access tiers:
+
+- Hot, cool, and cold access tiers can be set at the account level. The archive
+  access tier isn't available at the account level.
+
+- hot, cool, cold, and archive tiers can be set at the blob level, during or
+  after upload
+
+- Data in the cool and cold access tier can tolerate slightly lower
+  availability, but still requires high durability, retrieval latency, and
+  throughput characteristics similar to hot data. For cool and cold data, a
+  lower availability service-level agreement (SLA) and higher access cost
+  compared to hot data are acceptable trade-offs for lower storage costs.
+
+- Archive storage stores data offline and offers the lowest storage cost, but
+  also the highest cost to rehydrate and access data.
+
+=== Azure Files
+Azure File storage offers fully managed file shares in the cloud that are
+accessible via the industry standard Server Message Block (SMB) or Network File
+System (NFS) protocols. Azure Files shares can be mounted concurrently by cloud
+or on-premises deployments. SMB Azure file shares are accessible from Windows,
+Linux, and macOS clients. NFS Azure Files shares are accesible from Linux or
+macOS clients. Additionally, SMB Azure file shares can be cached on Window
+Servers with Azure File Sync for fast access near where the data is being used.
+
+=== Azure Files key benifits
+
+- *Shared access*: Azure file shares support the industry standard SMB and NFS
+  protocols, meaning you can seamlessly replace you on-premises file shares with
+  Azure file shares without worring about application compatibility.
+
+- *Fully managed*: Azure file shares can be created without the need to manage
+  hardware or an OS. This means ou don't have to deal with patching the server
+  OS with critical security upgrades or replacing faulty hard disks.
+
+- *Scripting and tooling*: PowerShell cmdlets and Azure CLI can be used to
+  create, mount, and manage Azure file shares as part of the administration of
+  Azure applications. You can create and manage Azure file shares using Azure
+  portal and Azure Storage Explorer.
+
+- *Resiliency*: Azure Files has been built from the ground up to always be
+  available. Replacing on-premises file shares with Azure Files means you don't
+  have to wake up in the middle of the night to deal with local power outages or
+  network issues.
+
+- *Familiar programming*: Applications running in Azure can access data in the
+  share vie file system I/O APIs. Developers can therefore use their existing
+  code and skills to migrate existing applications. In addition to System IO
+  APIs, you can use Azure Storage Client Libraries or Azure Storage REST API.
