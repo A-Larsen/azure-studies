@@ -353,3 +353,124 @@ their identity, and you manage access to your apps with Microsoft EntraID or
 Azure AD B2C to keep your resources protected.
 
 The following capabilities make up External identities:
+
+- *Business to business (B2B) collaboration* - Collaborate with external users
+  by letting them user their preferred identity to sign-in to your Microsoft
+  applications or other enterprise applications (SaaS apps, customer-developed
+  apps, etc). B2B collaboration users are represented in your directory,
+  typically as guest users.
+
+- *B2B direct connect* - Establish a mutual, two-way trust with another
+  Microsoft Entra organization for seamless collaboration. B2B direct conncet
+  currently supports Teams shared channels, enabling external users to access
+  your resoureces form within their home instances of Team. B2B direct connect
+  users aren't represented in your directory, but they're visible form within
+  the Teams shared channel and can be monitored in Teams admin center reports.
+
+- *Microsoft Entra business to customer (B2C)* - Publish modern SaaS apps or
+  custom-developed apps (excluding Microsoft apps) to consumers and customers,
+  while using Azure AD B2C for identity and access managment.
+
+you can use a combinatino of these capabilities.
+
+Wtih B2B you can easilty ensure that the guest users have appropriate access.
+You can ask the guests themselves or a decision maker to participate in an
+access review and recertify (or attest) to the guests' access. The reviewers can
+give their input on each user's need for continued access, based on suggestions
+from Microsoft Entra ID. When an access review is finished, you can then make
+changes and remove access for guests who no longer need it.
+
+== Descibe Azure conditional access
+
+Conditional Access is a tool that Microsoft Entra ID uses to allow (or deny)
+access to resources based on identity signals. These signals include who the
+user is, where the user is, where the user is, and what device the user is
+requesting access from.
+
+Conditional Access helps IT administrators:
+
+- Empower users to be productive wherever and whenever
+- protect the organization's assets
+
+Conditional Access also provides a more granular multifactor authentication
+experience for users. For example, a user might not be challenged for a seconds
+authentication factor if they're at a known location. However, they might be
+challenged for a second authentication factor if their sign-in signals are
+unusual or they're at an unexpected location.
+
+During sign-in, Conditional Access collects signals form the user, makes
+decisions based on those signals, and then enforces that decision by allowing or
+denying the access request or challenging for multifactor authenticatoin
+response.
+
+
+=== When can I user Conditional Access?
+
+Conditional Access is useful when you need to:
+
+- Require multifaccator authentication (MFA) to access an application depending
+  on the requester's role, location, or network.
+
+- Require access to services only through approved client applications.
+
+- Require user to access your application only from managed devices. A managed
+  device is a device that meets your standars for security and compliance.
+
+- Block access from untrusted sources, such as access from unkown or unexpected
+  locations
+
+== Describe Azure role-based access control (RBAC)
+
+*principle of least privilege*::
+    only grant access up to the level needed to complete a task
+
+principle of least privilege would become tedious. Instead of this Azure enables
+you to control access through Azure role-based access control.
+
+Azure provides built-in roles that descibe common access rules for cloud
+resources. You can alos define your own roles. Each role has an associated set
+of access permisions that relate to that role. When you assign individual or
+groups to one or more roles, they receive all the associated access permisions.
+
+== How is role-based access control applied to resources?
+
+Role-based access control is applied to a scope, which is a resource or set of
+resource that this access applies to.
+
+Scopes include:
+
+- A management group (a collection of multiple subscriptoins).
+- A single subscription.
+- A resource group.
+- A single resource
+
+Observers, users managing resources, admins, and automated processes illustrate
+the kinds of users or accounts that would typically be assigned each of the
+various roles.
+
+Azure RBAC is hiearchical, in that when you grant access at a parent scope,
+those permissions are inherited by all child scopes. For example:
+
+- When you assign the Owner role to a user at the management group scope, that
+  user can manage everything in all subscriptions within the managment group.
+
+- When you assign the Reader role to a group at the subscription scope, the
+  member of that group can view every resource grouop and resource within the
+  subscription
+
+=== How is Azure RBAC enfored?
+
+Azure RBAC is enforced on any action that's initiated against an Azure resource
+that passes through Azure Resource Manager. Resource Manager is a managment
+service that provides a way to organize and secure your cloud resources.
+
+you typically acces Resource Manager from the Azure portal, Azure Cloud Shell,
+Azure PowerShell, and the Azure CLI. Azure RBAC doesn't enfore access
+permissions at the application or data level. Application security must be
+handled by your application.
+
+Azure RBAAS uses an allow model. When you're assigned a role, Azure RBAC allows
+you to perfor actions within the scope of that role. If one role assignment
+grants you read permissoins to a resource grouop and a different role assignment
+grants you write permissions to the same resource group, you have both read and
+write permisions on the resource group.
