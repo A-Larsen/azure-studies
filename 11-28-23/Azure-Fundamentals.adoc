@@ -570,3 +570,96 @@ in almost all cases, attackers are after data:
 - stored on disk inside virtual machines
 - stored in software as a service (SaaS) applications (such as Office 365)
 - Managed through cloud storage
+
+== Descibe Microsoft Defender for Cloud
+- monitors your cloud, on-premises, hybrid, and mult-clound environments
+
+=== Protection everywhere you're deployed
+in on-premises datacenters, defender may not give you a complete picture
+
+- can automatically deploy a Log of Analytics to gather security-related data.
+  For Azure machines, deployment is handled directly.
+
+For hybrid and multi-cloud environments, Microsoft Defender plans are extended
+to non Azure machines with the help of Azure Arc. Cloud security posture
+managment (CSPM) features are extended to multi-cloud machines without the need
+for any agents.
+
+=== Azure-native protections
+
+Defender for Cloud helps you detect threats across:
+
+- Azure PaaS services - Detect threats targeting Azure Services including Azure
+  App Service, Azure SQL, Azure Storage Account, and more data services. You can
+  also perform anomaly detection on your Azure activity logs using the native
+  integratoin with Microsoft Defender for Cloud Apps
+
+- Azure data services - Defender for Cloud includes capabilities that help you
+  automatically classify your data in Azure SQL. You can also tget assessments
+  for potential vulnerabilities acess Azure SQL and Storage services, and
+  recommendatinos for how to migrate them
+
+- *Networks* - Defender for Cloud helps you limit exposure to brute force
+  attacks. Buy reducing access to virtual machines ports, using the just-in-time
+  VM access, you can harden your network by preventing unnecessary access. You
+  can set secure access policies on selected ports, for only authorized users,
+  allowed source IP address ranges or Ipaddresses, and for a limitd amount of
+  time.
+
+=== Defened your hybrid resources
+
+In addition to defending your Azure environment, you can add Defender for cloud
+capabilities to your hybrid cloud environment to protect you non-Azure servers.
+To help you focus on what matters the most, you'll get customized thread
+inelligence and prioritized alerts according to your specific environment.
+
+To extend protection to on-premises machines, deploy Azure Arc and enable
+Defender for Cloud's enhanced security features.
+
+=== Defend resources running on other clouds
+- such as AWS and GCP
+
+For example, if you've connected an Amazon Web Service (AWS) account to an Azure
+subscription, you can enable any of these protections
+
+- Defender for Cloud's CSPM features extend to your AWS resoureces. This
+  agentless plan assess you AWS resources according to AWS-specific security
+  recommendations, and includes the results in the secure score. The resources
+  will also be assessed for compliance with built-in standards specific to AWS
+  (AWS, CIS, AWS PCI DSS, and AWS Foundational Security Best Practices).
+  Defender for Cloud's asset inventory page is a multi-cloud enabled feature
+  helping you manage your AWS resources alongside you Azure resources.
+
+- Microsoft Defender for Containers extends its container threat detection and
+  advanced defense to you Amazon EKS linuc clusters.
+
+=== Assess, Secure and Defend
+
+fills these needs:
+
+- continously assess - Know your security posture. Identify and track
+  vulnerabilities.
+
+- Secure - Harden resources and services with Azure Security Benchmark
+
+- Defend - Detect and resolve threats to resources, workloads, and services
+
+==== Continuosly assess
+
+continously assesses your environment.
+
+=== Secure
+
+plocies in Defender for Cloud are built on top of Azure Policy Controls.
+
+The list of recommendations is enabled and supported by the Azure Security
+Benchmark. This Microsoft-authored, Azure-specific, benchmark provides a set of
+guidelines for security and compliance best priactices based on common
+compliance frameworks.
+
+To help you understand how important each recomendation is to your overall
+security posture, Defender for Cloud groups the recommendations into security
+controls and adds a secure score value to each control. The secure score gives
+you an at-a-glance indicator fo the health of you security posture, while the
+controls give you a working list of things to consider to improve your security
+score and your overall security posture.
