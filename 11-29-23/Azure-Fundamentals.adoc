@@ -12,6 +12,9 @@ TCO:
 2. Adjust assumptions
 3. View report
 
+best method to estimate teh cost of migrating to the cloud while incurring
+minimal cost
+
 == Describe the Microsoft Cost Managment tool
 
 === What is Cost Managment
