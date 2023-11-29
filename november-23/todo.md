@@ -3,6 +3,8 @@ Notes for learning microsofts azure server
 
 # Todo
 
+Austin: 
+
 - [ ] Learn fundamentals
 
 - [ ] [Cloud resume challenge](https://cloudresumechallenge.dev/docs/the-challenge/)
@@ -13,3 +15,7 @@ Notes for learning microsofts azure server
 - [ ] ms Azure exam az900
 
 - [ ] figure out time period (scope) for learning azure
+
+Raymond:
+
+- [ ] Find other exam question websites
