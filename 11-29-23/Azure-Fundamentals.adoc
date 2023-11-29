@@ -338,3 +338,25 @@ The Microsoft Service Trust Portal is a portal that provides access to various
 content, tools, and other resources about Microsoft security, privacy, and
 compliance practices. 
 
+The Service Trust Portal contains details about Microsoft's implementation of
+controls and processes that protect our cloud services and the customer data
+therein. To access some of the resources on the Service Trust Portal, you must
+sign in as an authenticated user with your Microsoft cloud services account
+(Microsoft Entra organization account). You'll need to review and accept the
+Microsoft non-disclosure agreement for compliance materials.
+
+=== Acessing the Service Trust Portal
+
+The Service Trust Portal features and content are accessible from teh main menu.
+The categories on the main menu are:
+
+=== Knowledge Check
+
+1. Q: Whow can you prevent creation of non-compient resources, without haveing
+   to manually evealuate each resources?
+
+1. A: Azure Policy
+
+2. Q: What's the best way to prevent inadvertent deletion of a resource?
+
+2. A: Azure resource locks
