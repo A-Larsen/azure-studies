@@ -221,3 +221,120 @@ Microsoft Purview's unified data governance helps your organization:
 - Managed acces to the data in your estate securely and at scale.
 
 == Describe the purpose of Azure Policy
+
+Azure Polciy is a service that enables you to create, assign, and manage polices
+that contorol or audit your resources. These polices enfore different rules
+across your resource configuration so that those configurations stay compliant
+with corporate standards.
+
+=== How does Azure Policy define policies
+
+Azure policy enables you to define both indidual policies of related policies,
+known as initiatives. Azure Policy evaluates your resources and highlights
+resources that aren't compliant with the polices you've created. Azure Policy
+can alos prevent noncompliant resources from being created.
+
+Azure Policies can be set at each level, enabling yo to set policies on a
+specific resource, resource group, subscription, and so, on. Additionally, Azure
+Policies are inherited, so if you set a policy at a high level, it will
+automatically be applied to all of the grouping that fall within the parent. For
+example, if you set an Azure Policy on a resource group, all resources created
+within that resource group will automatically reveive the same policy.
+
+Azure Policy comes with built-in policy and initiative definitions for Storage.
+Networking, Compute, Security Center, and Monitoring. For example, if you define
+a policy that allows only a certain size for the virtual machines (VMs) to be
+used in your environment, that policy is invoked when you create a new VM and
+whenever you resize existing VMs. Azure Policy also evealuates and monitors all
+current VMs in your environment, including VMs that were created before the
+policy was created.
+
+In some cases, Azure Policy can automatically remediate noncompliant resources
+and configurations to ensure the integrity of the state of the resources. For
+example, if all resources in a certain resource gruop should be tagged with
+AppName tag and a value of "SpecialOrders", Azure Policy will automatically
+apply that tag if it is missing. However, you still retain full control of you
+environment, if you have a specific resource that you don't want Azure Policy to
+automatically fix, you can falg that resource as an exception - and the policy
+won't automatically fix that resource.
+
+Azure Policy also integrats with Azure DevOps by applying any continuous
+integration and delivery pipeline policies that pertain to the pre-deployment
+and post-deployment phases of you applications.
+
+=== Whare are Azure Policy initiatives?
+
+An Azure Policy initiative is a way of grouping related policies together. The
+initiative definition contains all of the policy definition to help track your
+compliance state for a larger goal.
+
+Under this initiative, the following policy definitions are included:
+
+- *Monitor unencrypted SQL Database in Security Center*. This policy monitors
+  for unencrypted SQL databases and servers.
+
+- *Monitor OS vulnerabilities in Security Center*. This policy monitors servers
+  that don't satisfy the configured OS vulnerability baseline.
+
+- *Monitor missing Endpoint protection in Security Center*. This policy monitors
+  for servers that don't have an installed endpoint protection agent.
+
+In fact, the Enable Monitoring in Azure Security Center intiative contains over
+100 seperate policy definitions.
+
+== Describe the purpose of resource locks
+
+A resource lock prevents resources from being accidently deleted or changed.
+
+Even with Azure role-based access control (Azure RBAC) policies in place,
+there's still a risk that people with the right level of access could delete
+critical cloud resources. Resource locks prevent resources from being deleted or
+updated, depending on the type of lock. Resource locks can be applid to
+individual resources, resource groups, or even an entire subscription. Resource
+locks are inherited. meaning that if you place a resource lock on a resource
+group, all of the resources within the resource group will also have the
+resource lock applied.
+
+=== Types of Resource Locks
+
+There are two types of resource locks, one that prevents users from deleting and
+one that prevents users form changing or deleting a resource.
+
+- *Delete* means authorized users can still read and modify a resource, but they
+  can't delete the resource.
+
+- *ReadOnly* means authorized users can read a resource, but they can't delte or
+  update the resource. Applying this lock is similar to restricting all
+  authorized users to the permisions granted by the Reader role.
+
+=== How do I manage resource locks?
+
+You can manage resource locks from the Azure portal, Powershell, the Azure CLI,
+or from an Azure Resource Manager template.
+
+To view, add, or delete locks in the Azure portal, go to the settings action of
+any resource's Settings pane in the Azure portal.
+
+=== How do I delete or change a locked resource?
+
+Although locking helps prevent accidental changes, you can still make changes by
+following a two-step process.
+
+To modify a locked resource, you must first remove the lock. After you remove
+the lock, you can apply any action you have permissions to perform. Resources
+locks apply regardless of RBAC permissions. Even if you're an owner of the
+resource, you must still remove the lock before you can perform the blocked
+activity.
+
+=== Exercise - Configure a resource lock
+
+In this exercise, you'll create a resource and configure a resource lock.
+Storage accounts are one of the easiest types of resource locks to quickly see
+the impact, so you'll use a storage account for this exercise.
+
+== Describe the purpose of the Service Trust portal
+
+The Microsoft Service Trust Portal is a portal that provides access to various
+content, tools, and other resources about Microsoft security, privacy, and
+compliance practices. 
+
