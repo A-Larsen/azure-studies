@@ -360,3 +360,56 @@ The categories on the main menu are:
 2. Q: What's the best way to prevent inadvertent deletion of a resource?
 
 2. A: Azure resource locks
+
+== Describe tools for interacting with Azure
+
+To get teh most out of Azure, you need a way to interact with the Azure
+environment, the management groups, subscriptions, resource gruops, resources,
+and so on. Azure provides multiple tools for managing your environment,
+including the:
+
+- Azure portol
+- Azure Powershell
+- Azure Command Line interface (CLI)
+
+=== What is the Azure portal?
+
+The Azure portal is a web-based, unified console that provides an alernative to
+command-lines tools. With the Azure portal, you can manage your Azure
+subscription by using a graphical user interface. You can:
+
+- Build, manage, and monitor everythin from simple web apps to complex cloud
+  deployments
+
+- Azure PowerShell
+
+- Azure Command Line Interface (CLI)
+
+
+=== What is Azure PowerShell?
+
+Azure PowerShel is a shell with which developers, DevOps, and IT professional
+can run commands called command-lets (cmdlets). These commands call the Azure
+REST API to perform managment tasks in Azure. Cmdlets can be run independently
+to handle one-off changes, or they may be combined to help orchestrate complex
+actions such as:
+
+- the routine setup, teardown, and maintance of a single resource or multiple
+connected resources.
+
+- The deployment of an entire infrastructure, which might contain dozens or
+  hundreds of resources, from imperative code.
+
+in addition to be available via Azure Cloud Shell, you can install and configure
+Azure PowerSHell on Windows, Linux, and Mac plaforms.
+
+=== What is the Azure CLI?
+
+The Azure CLI is functionally equivalent to Azure PowerShell, with the primary
+difference being the syntax of commands. While Azure Powerhsell uses Powershell
+commands, teh Azure CLI uses Bash commands.
+
+The Azure CLI provides teh same benefits of handling discrete tasks or
+orchestrating complex operations through code. It's alos installable on Windows,
+Linux, and Mac platforms, as well as through Azure Cloud Shell.
+
