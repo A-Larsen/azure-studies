@@ -491,3 +491,65 @@ outside of Azure:
 
 - Clarify your organization's billing by viewing costs for a group of resources
   that share the same tag.
+
+=== Infrastructure as code
+
+Infrastructure as code is a concept where you manage your infrastructure as
+lines of code. At an introductory level, it's things like using Azure Cloud
+Shell, Azure PowerSHell, or the Azure CLI to manage and configure your
+resources. As you get more comfortable in the cloud, you can use the
+infrastructure as code concept to manage entire deployments using repeatable
+templates and configurations. ARM templates and Bicep are two examples of using
+infrastructure as code with Azure Resource Manager to maintain your environment.
+
+=== ARM templates
+
+By using ARM templates, you can describe the resource you want to use in a
+declarative JSON format. With an ARM template, the deploymoent code is verified
+before any code is run. This ensures that the resources will be created and
+connect correctly. The template then orchestrates the creation of those
+resources in parallel. That is, if you need 50 instances of the same
+resources, all 50 instances are created at the same time.
+
+Ultimately, the developer, DevOps professional, or IT profesional needs only to
+define the disired state and configuration of each resource in the ARM template,
+and the template does the rest. Templates can even execute PowerShell and Bash
+scripts before or after the resource has been set up.
+
+=== Benefits of using ARM templates
+
+ARM templates provide many benefits when planning for deploying Azure resources.
+Some of those benefits include:
+
+- *declarative syntax*. ARM templates allow you to create and deploy an entire
+  Azure infrastructure declaratively. Declarative syntax means you declare what
+  you want to deploy byt don't need to write teh actual programming commands and
+  sequence to deplay the resources.
+
+- *Repeatable results*. Repeatedly deploy your infrastructure throughout the
+  development lifecycle and have confidence you resources are deployed in a
+  consistent manner. You can use the same ARM template to deploy multiple
+  dev/test environments, knowing that all the environments are the same.
+
+- *Orchestration*. You don't have to worry about the complexities of ordering
+  operations. Azure Resource Manager orchestrates the deployment of
+  interdependent resources, so they're created in the correct order. When
+  possible, Azure Resource Manager deploys resources in parallel, so you
+  deployments finish faster than serial deployments. You deploy the template
+  through one command, rather than through multiple imperative commands.
+
+- *Modular files*. You can break your templates into smaller, reusable
+  components and link them together at deployment time. You can also nest one
+  template inside another template. For example, you could  create a template
+  for a VM stack, and then nest that template inside of templates that deploy
+  entire environments, and that VM stack will consistently be deployed in each
+  of the environment templates.
+
+- *Extensibility*. With deployment scripts, you can add PowerShell or Bash
+  scripts to your templates. The deployment scripts exxtend your ability to set
+  up resources during deployment. A script can be included in the template or
+  stored in an external source and referenced in the template. Deployment
+  scripts give you the ability to complete your end-to-end environment setup in
+  a single ARM template
+
+=== Bicep
