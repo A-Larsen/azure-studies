@@ -553,3 +553,39 @@ Some of those benefits include:
   a single ARM template
 
 === Bicep
+Bicep is a language that uses declarative syntax to deploy Azure resources. A
+Bicep file defines the infrastructure and configuration. Then, ARM deploys that
+environment based on your Bicep file. While similar to an ARM template, which is
+written in JSON, Bicep files tend to use a simpler, more concise style.
+
+some benifits of Bicep are:
+
+- *Support for all resource types and API verions*: Bicep immmediately supports
+  all preview and GA versions for Azure services. As soon as a resource provider
+  introduces new resoure types and API versions, you can use them in your Bicep
+  file. You don't have to wait for tools to be updated before using the new
+  services.
+
+- *Simple syntax*. When compared to the equivalent JSON template. Bicep files
+  are more concise and easier to read. Bicep requires no previous knowledge of
+  programming languages. Bicep syntac is declarative and specifies which
+  resourcesand recource properites you want to deploy.
+
+- *Repeatable results*. Repeatedly deploy your infrastructure throughout the
+  development lifecycle and have confidence your resources are deployed in a
+  consistent manner. Bicep files are idempotent, which means you can deploy the
+  same file many times and get the same resource types in the same state. You
+  can develop one file that represents the desired state rather than developing
+  lots of seperate files to represent updates.
+
+- *Orchestration*. You don't have to worry about the complexities of ordering
+  operations. Resource Manager orchestrates the deployment of  interdependant
+  resources so they're created in the correct order. When possible, Resource
+  Manager deploys resources in parrallel so your deployments finish faster than
+  serial deployments. You deploy the file through one command, rather than
+  through multiple imperative command.
+
+- *Modularity*. You can break your Bicep code into manageable parts by using
+  modules. The module deploys a set of related resources. Modules enable you to
+  reuse code and simplify development. Add the module to a Bircep file anytime
+  you need to deploy those resources.
