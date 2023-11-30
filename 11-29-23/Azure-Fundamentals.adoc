@@ -442,3 +442,52 @@ Azure Arc provides a centralized, unified way to:
 
 - Configure custom locations as an abstraction layer on top of Azure Arc-enabled
   kubernetes clusters and cluster extensions.
+
+=== What can Azure Arc do outside of Azure?
+
+Currently, Azure Arc allows you to manage the following resource types hosted
+outside of Azure:
+
+- Server
+- Kubernetes clusters
+- Azure data services
+- SQL Server
+- Virtual machines (preview)
+
+== Describe Azure Resource Manager and Azure ARM templates
+
+ Azure Resource Manager (ARM) is the deployment and management service for
+ Azure. It provides a management layer that enables yo to create, update, and
+ delete resources in your Azure account. Anytime you do anything with your
+ Azure resources, ARM is involved.
+
+ When a user sends a request from any of the Azure tools, APIs, or SDKs, ARM
+ receives the request. the, ARM sends the request to the Azure service which
+ takes the requested action. You see consistent results and capabilities in all
+ the different tools because all requests are handled through the same API.
+
+ Azure Resource Manager benefits
+
+ With Azure Resource Manager, you can:
+
+ - Manage your infrastructure through declarative templates rather than scripts.
+   A Resource Manager template is a JSON file that defines what you want to
+   deploy to Azure.
+
+- Deploy, manage, and monitor all the resources for your solution as a group,
+  rather than handling these resources individually.
+
+- Re-deploy your solution throughout the development life-cycle and have
+  confidence your resources are deployed in a consistent state.
+
+- Define the dependencies between resources, so they're deployed in the correct
+  order.
+
+- Apply access control to all services because RBAS is natively integrated into
+  the management platform.
+
+- Apply tags to resourcces to logically organize all the resources in you
+  subsciption.
+
+- Clarify your organization's billing by viewing costs for a group of resources
+  that share the same tag.
