@@ -257,11 +257,8 @@ Data Policy
 
 breakdown::
 Data Catalog -> this enables data discovery
-
 Data sharing -> This shares data within and between organizations
-
 Data Estate Insights -> This accesses data estate health
-
 Data Policy -> This governs access to data
 
 == Notes
