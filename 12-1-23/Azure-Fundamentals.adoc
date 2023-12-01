@@ -1,0 +1,92 @@
+== practice test
+
+Q::
+Which resource can you use to manage access, policies, and compliance across
+multiple subscriptions?
+
+A::
+Managment groups
+
+breakdown::
+Managment groups can be used in environments that have multiple subscriptions to
+streamline the application of governance conditions.
+
+Resource groups can be used to organize Azure resrources.
+
+Administrative units are used to delegate the administratoin of Azure AD
+resources, such as users and gruoops.
+
+
+Q:: 
+you need to allow resources on two different Azure virtual networking to
+communicate with each other. what should you configure
+
+A::
+peering
+
+breakdown::
+You can link virtual networks together by using network peering. Peering enables
+resources in each virtual network to communicate with each other.
+
+Q:: 
+What can you use to conect Azure resources, such as Azure SQL databases, to an
+Azure virtual network
+
+A::
+service endpoints
+
+breakdown::
+Service endpoints are used to expose Azure services to a virtual network,
+providing communication between two. ExpressRoute is used to connect an
+on-premises network to Azure. NSGs allows you to configure inbound and outboud
+rules for virual networks and machines. Peering allowsyou to connect virtual
+network together
+
+Q::
+Which storage service offers fully managed file shares in the cloud that are
+accesible by using Service Message Blocks (SMB) protocol.
+
+A::
+Azure files
+
+breakdown::
+Azure Files offers fully managed file shares in the cloud with shares that are
+accessible by using Server Message Block (SMB) protocol. Mounting Azure file
+share is just like connecting to shares on a local network.
+
+Q::
+What can you use to allow a user to manage all the resources in a resource
+group?
+
+A::
+Azure role-based access controll (RBAC)
+
+breakdown::
+Azure RBAC allows you to assign a set of permissions to a user or group.
+Resource tags are used to locate and act on resources associated with specific
+workloads, environments, business units, and owners. Resource locks prevent the
+accidental change or deletion of a resource. Key Vaut is a centralized cloud
+service for storing application in a single, central location.
+
+
+Q::
+To which object or level is an Azure role-based access control (RBAC) role
+applied?
+
+A::
+scope
+
+breakdown::
+
+An Azure RBAC role is applied to a scope, which is a resource or set of
+resources that the access applies to. Resource locks prevent the accidental
+cahnge or deletion of a resource. Resource tags are used to locate and act on
+resource associated with specific workloads, environments, business units, and
+owners. Polices enforce different rules accros resource configurations so that
+the configurations stay compliant with corporate standards.
+
+Q::
+What is high availability in a public cloud environment dependent on?
+
+A::
+the service-level agreement (SLA) the you choose.

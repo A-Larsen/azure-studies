@@ -5,7 +5,7 @@ Notes for learning microsofts azure server
 
 Austin: 
 
-- [ ] Learn fundamentals
+- [x] Learn fundamentals
 
 - [ ] [Cloud resume challenge](https://cloudresumechallenge.dev/docs/the-challenge/)
     * https://www.youtube.com/watch?v=kVO75iNc5XI
@@ -14,8 +14,16 @@ Austin:
 
 - [ ] ms Azure exam az900
 
-- [ ] figure out time period (scope) for learning azure
+- [x] figure out time period (scope) for learning azure
+
+- [ ] re-learn django
+
+- [ ] practice / review for exam
+    * https://www.youtube.com/watch?v=tQp1YkB2Tgs
+    * https://learn.microsoft.com/en-us/credentials/certifications/exams/az-900/practice/assessment
+    * udemy
 
 Raymond:
 
 - [ ] Find other exam question websites
+
