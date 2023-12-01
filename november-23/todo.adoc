@@ -1,10 +1,10 @@
-# Todo
+== Todo
 
 Austin: 
 
 - [x] Learn fundamentals
 
-- [ ] [Cloud resume challenge](https://cloudresumechallenge.dev/docs/the-challenge/)
+- [ ] https://cloudresumechallenge.dev/docs/the-challenge/[Cloud Resume challenge]
     * https://www.youtube.com/watch?v=kVO75iNc5XI
 
 - [x] Create linkedin account

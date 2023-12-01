@@ -1,4 +1,4 @@
-# Azure-studies
+== Azure-studies
 
 Notes for learning Microsofts azure cloud, and services that can be used on
 the Microsoft Azure cloud
