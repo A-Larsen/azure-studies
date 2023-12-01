@@ -273,7 +273,7 @@ you do everything
 
 
 === Azure Service health vs Azure Monitor (notifications)
-- notify you when service issues, planned maintenance, or other changes may
+- *Azure Health* notifies you when service issues, planned maintenance, or other changes may
   affect the Azure services and regions you use
 
-- notify you about specific services
+- *Azure Health* notifies you about specific services
