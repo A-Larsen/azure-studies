@@ -138,6 +138,115 @@ your specific requirements. You will then receive a consolidated estimated price
 and a detailed breakdown of the cost associated with each resource you added to
 your solution.
 
+Q::
+You need to recomend a solution for Azure Virtual machine deployments. The
+solution must enforce company standars on the virtual machiens. What should you
+include in teh recommendation?
+
+A::
+Azure Poliy
+
+breakdown::
+Azure policies allow you to enforce company standards on new virtual machines
+when combined with Azure VM Image builder and Azure Compute Gallery. By using
+Azure Policy and role-based access control RBAC assignments, enterprises can
+enforce standards on Azure resources. But on virtual machines, these mechanisms
+only affect the control plane or the route to the virtual machine.
+
+Q::
+What can you use to define the resources you want to provision in a declarative
+JSON format?
+
+A::
+Azure Resource Manager (ARM) templates
+
+Q::
+Which managment layer accepts requests from any Azure tool or API and enables
+you to create, update, and delete resources in an Azure account?
+
+A::
+Azure Resource Manager (ARM)
+
+Q::
+What should you use to access Azure Cloud shell
+
+A::
+a web browser
+
+Q::
+What can you use to create resources in Azure and includes a validation step to
+ensure all resources are created in a specific order based on dependencies, in
+parallel and idempotent
+
+A::
+Azure Resource Manager (ARM) templates
+
+breakdowm::
+ARM templates define an application's infrastructure requirements for a
+repeatable deployment that is done in a consistent manner. A validation step
+ensures that all resources can be created in the proper order based on
+dependencies, in parallel and idempotent.
+
+Q::
+You need to review the root cause analysis (RCA) report for a service outage
+that occured last week. Where should you look for the report?
+
+A::
+Azure Service Health
+
+breakdown::
+AFter and outage, Service Health provides official incident reports called root
+cause analysis (RCA), which you can share with stakeholders.
+
+Q::
+You need to be notified when there are new recommendations for reducing Azure
+costs. Which tool should you use?
+
+A::
+Azure advisor
+
+breakdown::
+Azure advisor evaluates Azure resources and makes recommendations to help
+improve reliability, security, and performance, achieve operational
+excellence, and reduce costs.
+
+Q::
+What should  you proactively review and act on to avoid interruptions, such as
+service retirements and breaking changes?
+
+A::
+health advisories
+
+breakdown::
+Health advisories are issues that require you take proactive action to avoid
+service interruptions, such as service retirements and breaking changes. Service
+issues are problems such as outages that require immediate actions.
+
+Q::
+Which Azure service can generate an alert if virtual machine utilization is over
+80% for five minutes?
+
+A::
+Azure Monitor
+
+breakdown::
+Azure monitor is a plaform for collecting, analizing, and alerting based on
+metrics. Azure Monitor can log data from an entire Azure and on-premises
+environment.
+
+Q::
+What can you use to find information about planned maintenance for Azure
+services that are critical to your organization?
+
+A::
+Azure Service Health
+
+breakdown::
+You can drill down to the affected services, regions, and details to show how an
+event will affect you and what you must do. Most of these events occur without
+any impact to you and will not be show. In a rare case that a reboot is
+required, Service health allows you to choose when to perform the maintenance to
+minimze the downtime.
 
 == Notes
 
@@ -161,3 +270,10 @@ you do everything
   system, network controls, and applications
 
 - partially responsible for identity and directory infastructure
+
+
+=== Azure Service health vs Azure Monitor (notifications)
+- notify you when service issues, planned maintenance, or other changes may
+  affect the Azure services and regions you use
+
+- notify you about specific services
