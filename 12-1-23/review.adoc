@@ -248,6 +248,22 @@ any impact to you and will not be show. In a rare case that a reboot is
 required, Service health allows you to choose when to perform the maintenance to
 minimze the downtime.
 
+Q::
+Which feature in the Microsoft Purview governance portal should you use to
+manage access to data sources and datasets?
+
+A::
+Data Policy
+
+breakdown::
+Data Catalog -> this enables data discovery
+
+Data sharing -> This shares data within and between organizations
+
+Data Estate Insights -> This accesses data estate health
+
+Data Policy -> This governs access to data
+
 == Notes
 
 === Saas vs Paas vs Iaas
