@@ -18,6 +18,9 @@ Austin:
     * nodejs (expresss) is more popular, least liked by me as a framework
     * SQL has the most popularity and most liked by me as a database
 
+NOTE: If you're using python you can use https://www.doxygen.nl/[doxygen] for
+easy documentation
+
 - [ ] practice / review for exam
     * https://www.youtube.com/watch?v=tQp1YkB2Tgs
     * https://learn.microsoft.com/en-us/credentials/certifications/exams/az-900/practice/assessment
