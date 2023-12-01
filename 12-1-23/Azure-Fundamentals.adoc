@@ -113,7 +113,7 @@ Infrastructure as a service (IaaS), and on-premises
     - partially responsible for network contorls, applications, and identity and
       directory infrastructures
 
-==== Paas
+==== Saas
     - not repsponsible for host, physical network,  datacenter, operating
       system, network controls, and applications
 
