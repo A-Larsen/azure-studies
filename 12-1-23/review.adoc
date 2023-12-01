@@ -306,3 +306,6 @@ you do everything
   affect the Azure services and regions you use
 
 - *Azure Health* notifies you about specific services
+
+== Regions
+something like east US / west US. About 100 miles apart-ish.

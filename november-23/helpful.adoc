@@ -1,0 +1,2 @@
+== Azure development from local machine
+https://learn.microsoft.com/en-us/azure/virtual-machines/windows/connect-ssh?tabs=azurecli[connec tto azure via ssh]
