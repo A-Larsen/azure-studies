@@ -309,3 +309,7 @@ you do everything
 
 == Regions
 something like east US / west US. About 100 miles apart-ish.
+
+== Environments
+Their are, china sets of regions, commercial sets of regions and
+U.S. government sets of regions. Basically there are issolated sets of regions
