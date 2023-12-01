@@ -90,3 +90,31 @@ What is high availability in a public cloud environment dependent on?
 
 A::
 the service-level agreement (SLA) the you choose.
+
+Q::
+In which two deploymen models are customers responsible fro managing systems
+that host applications? 
+
+A::
+Infrastructure as a service (IaaS), and on-premises
+
+=== Saas vs Paas vs Iaas
+
+=== on-premises
+    you do everything
+
+==== IaaS
+    - you do everything but you're not repsponsible for host, physical network,
+      or datacenter
+
+==== Paas
+    - not repsponsible for host, physical network, or datacenter
+
+    - partially responsible for network contorls, applications, and identity and
+      directory infrastructures
+
+==== Paas
+    - not repsponsible for host, physical network,  datacenter, operating
+      system, network controls, and applications
+
+    - partially responsible for identity and directory infastructure
