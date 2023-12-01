@@ -98,6 +98,19 @@ that host applications?
 A::
 Infrastructure as a service (IaaS), and on-premises
 
+Q::
+    What uses the infrastructure as a service (Iaas) cloud service model?
+
+A::
+    Azure virtual machines
+
+breakdown::
+
+Azure Virual machiens is an Iaas offering. The customer is responsible for the
+configuration of the virtual machine as well as all operating system
+configurations. Azure App Services and Azure Cosmos DB are PaaS offering.
+Microsoft Office is a SaaS offering.
+
 === Saas vs Paas vs Iaas
 
 === on-premises
