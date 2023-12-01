@@ -17,7 +17,7 @@ Austin:
 - [x] figure out time period (scope) for learning azure
 
 - [ ] re-learn django, or nodejs, or SQL.
-    * django is least popular, most liked by me as a frameworkd
+    * django is least popular, most liked by me as a framework
     * nodejs (expresss) is more popular, least liked by me as a framework
     * SQL is has the most popularity and most liked by me as a database
 
