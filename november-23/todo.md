@@ -18,7 +18,7 @@ Austin:
 
 - [ ] re-learn django, or nodejs, or SQL.
     * django is least popular, most liked by me as a frameworkd
-    * nodejs (express) is more popular, least liked by me as a framework
+    * nodejs (expresss) is more popular, least liked by me as a framework
     * SQL is has the most popularity and most liked by me as a database
 
 - [ ] practice / review for exam
