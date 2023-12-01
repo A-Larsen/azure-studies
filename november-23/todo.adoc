@@ -19,7 +19,7 @@ Austin:
     * SQL has the most popularity and most liked by me as a database
 
 NOTE: If you're using python you can use https://www.doxygen.nl/[doxygen] for
-easy documentation
+      easy documentation
 
 - [ ] practice / review for exam
     * https://www.youtube.com/watch?v=tQp1YkB2Tgs
