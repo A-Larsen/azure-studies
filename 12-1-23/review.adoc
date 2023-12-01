@@ -272,17 +272,33 @@ you do everything
 - you do everything but you're not repsponsible for host, physical network,
   or datacenter
 
+- vm's (virtual machines)
+
+- vmss's (virtual machine scale sets)
+
 ==== Paas
 - not repsponsible for host, physical network, or datacenter
 
 - partially responsible for network contorls, applications, and identity and
   directory infrastructures
 
+-  Azure Container Instances (ACI)
+
+- Azure kubernetes Services (AKS)
+
+- app services
+
+- Azure Functions
+
+- Logic apps
+
 ==== Saas
 - not repsponsible for host, physical network,  datacenter, operating
   system, network controls, and applications
 
 - partially responsible for identity and directory infastructure
+
+- Microsoft 365
 
 
 === Azure Service health vs Azure Monitor (notifications)
