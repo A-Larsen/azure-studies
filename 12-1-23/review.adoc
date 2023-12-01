@@ -99,10 +99,10 @@ A::
 Infrastructure as a service (IaaS), and on-premises
 
 Q::
-    What uses the infrastructure as a service (Iaas) cloud service model?
+What uses the infrastructure as a service (Iaas) cloud service model?
 
 A::
-    Azure virtual machines
+Azure virtual machines
 
 breakdown::
 
@@ -111,23 +111,53 @@ configuration of the virtual machine as well as all operating system
 configurations. Azure App Services and Azure Cosmos DB are PaaS offering.
 Microsoft Office is a SaaS offering.
 
+Q::
+Which two factors affect Azure costs? Each correct answer presents a complete
+solution.
+
+A::
+resouce locatoins, and resource usage
+
+breakdown::
+Usage meters, such as CPU time, disk size, and write operations, are used to
+calculate your bill for an Azure resource. Deleting or deallocating a resource
+means that you will no longer be billed for it. Different regions can have
+different associated prices. Resources cost the same no matter the time of day
+or the day of the week.
+
+Q::
+you plan to builda new solution in Auzre that will use platform as a service
+(PaaS) products. What should you use to estimate the monthly cost?
+
+A::
+Azure pricing calculator
+
+breakdown::
+The Azure Pricing calculator allows you to estimate and configure according to
+your specific requirements. You will then receive a consolidated estimated price
+and a detailed breakdown of the cost associated with each resource you added to
+your solution.
+
+
+== Notes
+
 === Saas vs Paas vs Iaas
 
 === on-premises
-    you do everything
+you do everything
 
 ==== IaaS
-    - you do everything but you're not repsponsible for host, physical network,
-      or datacenter
+- you do everything but you're not repsponsible for host, physical network,
+  or datacenter
 
 ==== Paas
-    - not repsponsible for host, physical network, or datacenter
+- not repsponsible for host, physical network, or datacenter
 
-    - partially responsible for network contorls, applications, and identity and
-      directory infrastructures
+- partially responsible for network contorls, applications, and identity and
+  directory infrastructures
 
 ==== Saas
-    - not repsponsible for host, physical network,  datacenter, operating
-      system, network controls, and applications
+- not repsponsible for host, physical network,  datacenter, operating
+  system, network controls, and applications
 
-    - partially responsible for identity and directory infastructure
+- partially responsible for identity and directory infastructure
