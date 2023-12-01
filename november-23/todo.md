@@ -16,7 +16,7 @@ Austin:
 
 - [x] figure out time period (scope) for learning azure
 
-- [ ] re-learn django
+- [ ] re-learn django, or nodejs, nodejs seems to be more popular
 
 - [ ] practice / review for exam
     * https://www.youtube.com/watch?v=tQp1YkB2Tgs
