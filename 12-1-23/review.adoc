@@ -7,10 +7,6 @@ multiple subscriptions?
 A::
 Managment groups
 
-++++
-<br>
-++++
-
 breakdown::
 Managment groups can be used in environments that have multiple subscriptions to
 streamline the application of governance conditions.
@@ -20,6 +16,9 @@ Resource groups can be used to organize Azure resrources.
 Administrative units are used to delegate the administratoin of Azure AD
 resources, such as users and gruoops.
 
+++++
+<hr>
+++++
 
 Q:: 
 you need to allow resources on two different Azure virtual networking to
@@ -31,6 +30,10 @@ peering
 breakdown::
 You can link virtual networks together by using network peering. Peering enables
 resources in each virtual network to communicate with each other.
+
+++++
+<hr>
+++++
 
 Q:: 
 What can you use to conect Azure resources, such as Azure SQL databases, to an
@@ -46,6 +49,10 @@ on-premises network to Azure. NSGs allows you to configure inbound and outboud
 rules for virual networks and machines. Peering allowsyou to connect virtual
 network together
 
+++++
+<hr>
+++++
+
 Q::
 Which storage service offers fully managed file shares in the cloud that are
 accesible by using Service Message Blocks (SMB) protocol.
@@ -57,6 +64,10 @@ breakdown::
 Azure Files offers fully managed file shares in the cloud with shares that are
 accessible by using Server Message Block (SMB) protocol. Mounting Azure file
 share is just like connecting to shares on a local network.
+
+++++
+<hr>
+++++
 
 Q::
 What can you use to allow a user to manage all the resources in a resource
@@ -72,6 +83,9 @@ workloads, environments, business units, and owners. Resource locks prevent the
 accidental change or deletion of a resource. Key Vaut is a centralized cloud
 service for storing application in a single, central location.
 
+++++
+<hr>
+++++
 
 Q::
 To which object or level is an Azure role-based access control (RBAC) role
@@ -89,11 +103,19 @@ resource associated with specific workloads, environments, business units, and
 owners. Polices enforce different rules accros resource configurations so that
 the configurations stay compliant with corporate standards.
 
+++++
+<hr>
+++++
+
 Q::
 What is high availability in a public cloud environment dependent on?
 
 A::
 the service-level agreement (SLA) the you choose.
+
+++++
+<hr>
+++++
 
 Q::
 In which two deploymen models are customers responsible fro managing systems
@@ -101,6 +123,10 @@ that host applications?
 
 A::
 Infrastructure as a service (IaaS), and on-premises
+
+++++
+<hr>
+++++
 
 Q::
 What uses the infrastructure as a service (Iaas) cloud service model?
@@ -114,6 +140,10 @@ Azure Virual machiens is an Iaas offering. The customer is responsible for the
 configuration of the virtual machine as well as all operating system
 configurations. Azure App Services and Azure Cosmos DB are PaaS offering.
 Microsoft Office is a SaaS offering.
+
+++++
+<hr>
+++++
 
 Q::
 Which two factors affect Azure costs? Each correct answer presents a complete
@@ -129,6 +159,10 @@ means that you will no longer be billed for it. Different regions can have
 different associated prices. Resources cost the same no matter the time of day
 or the day of the week.
 
+++++
+<hr>
+++++
+
 Q::
 you plan to builda new solution in Auzre that will use platform as a service
 (PaaS) products. What should you use to estimate the monthly cost?
@@ -141,6 +175,10 @@ The Azure Pricing calculator allows you to estimate and configure according to
 your specific requirements. You will then receive a consolidated estimated price
 and a detailed breakdown of the cost associated with each resource you added to
 your solution.
+
+++++
+<hr>
+++++
 
 Q::
 You need to recomend a solution for Azure Virtual machine deployments. The
@@ -157,12 +195,20 @@ Azure Policy and role-based access control RBAC assignments, enterprises can
 enforce standards on Azure resources. But on virtual machines, these mechanisms
 only affect the control plane or the route to the virtual machine.
 
+++++
+<hr>
+++++
+
 Q::
 What can you use to define the resources you want to provision in a declarative
 JSON format?
 
 A::
 Azure Resource Manager (ARM) templates
+
+++++
+<hr>
+++++
 
 Q::
 Which managment layer accepts requests from any Azure tool or API and enables
@@ -171,11 +217,19 @@ you to create, update, and delete resources in an Azure account?
 A::
 Azure Resource Manager (ARM)
 
+++++
+<hr>
+++++
+
 Q::
 What should you use to access Azure Cloud shell
 
 A::
 a web browser
+
+++++
+<hr>
+++++
 
 Q::
 What can you use to create resources in Azure and includes a validation step to
@@ -191,6 +245,10 @@ repeatable deployment that is done in a consistent manner. A validation step
 ensures that all resources can be created in the proper order based on
 dependencies, in parallel and idempotent.
 
+++++
+<hr>
+++++
+
 Q::
 You need to review the root cause analysis (RCA) report for a service outage
 that occured last week. Where should you look for the report?
@@ -201,6 +259,10 @@ Azure Service Health
 breakdown::
 AFter and outage, Service Health provides official incident reports called root
 cause analysis (RCA), which you can share with stakeholders.
+
+++++
+<hr>
+++++
 
 Q::
 You need to be notified when there are new recommendations for reducing Azure
@@ -214,6 +276,10 @@ Azure advisor evaluates Azure resources and makes recommendations to help
 improve reliability, security, and performance, achieve operational
 excellence, and reduce costs.
 
+++++
+<hr>
+++++
+
 Q::
 What should  you proactively review and act on to avoid interruptions, such as
 service retirements and breaking changes?
@@ -226,6 +292,10 @@ Health advisories are issues that require you take proactive action to avoid
 service interruptions, such as service retirements and breaking changes. Service
 issues are problems such as outages that require immediate actions.
 
+++++
+<hr>
+++++
+
 Q::
 Which Azure service can generate an alert if virtual machine utilization is over
 80% for five minutes?
@@ -237,6 +307,10 @@ breakdown::
 Azure monitor is a plaform for collecting, analizing, and alerting based on
 metrics. Azure Monitor can log data from an entire Azure and on-premises
 environment.
+
+++++
+<hr>
+++++
 
 Q::
 What can you use to find information about planned maintenance for Azure
@@ -251,6 +325,10 @@ event will affect you and what you must do. Most of these events occur without
 any impact to you and will not be show. In a rare case that a reboot is
 required, Service health allows you to choose when to perform the maintenance to
 minimze the downtime.
+
+++++
+<hr>
+++++
 
 Q::
 Which feature in the Microsoft Purview governance portal should you use to
