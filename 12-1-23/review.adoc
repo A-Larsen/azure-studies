@@ -326,3 +326,10 @@ services are zonal, meaning they will be created with a specific availablity. if
 you just set a number for a public ip's availability zone then it is
 zone-redundant. virtual machines are zonal and there is no option to be zone
 redundant
+
+Q::
+I want to deploy a service and I want to make sure my service can survive the
+failure of a data center.
+
+A::
+availability zone
