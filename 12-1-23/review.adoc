@@ -7,6 +7,10 @@ multiple subscriptions?
 A::
 Managment groups
 
+++++
+<br>
+++++
+
 breakdown::
 Managment groups can be used in environments that have multiple subscriptions to
 streamline the application of governance conditions.
