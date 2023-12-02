@@ -416,8 +416,11 @@ failure of a data center.
 A::
 availability zone
 
-== Loical components (resources)
+Local components -> resources
 
+== Authentication
+
+=== Azure AD
 Azure AD authentication protocols:
 
 - OIDC
@@ -425,5 +428,18 @@ Azure AD authentication protocols:
 - WS-FED
 - OAUTH2
 
-Authentication can be something I know, have or am.
+many applications can use Azure AD at once. You can have a single identity for
+multiple applications
+
+What happens if a company already has an active directory (on-premises). In this
+case you can sychronize using azure AD connect.
+
+Authentication can be something I know, have or am. multifacor authentication is
+two of these.
+
+=== conditional access
+with conditional accesss, you can choose to require mutlifactor authenticathion
+rules about when an application should be available
+
+=== RBAC (Role Base Access Control)
 
