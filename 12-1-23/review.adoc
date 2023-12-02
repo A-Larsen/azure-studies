@@ -435,11 +435,26 @@ What happens if a company already has an active directory (on-premises). In this
 case you can sychronize using azure AD connect.
 
 Authentication can be something I know, have or am. multifacor authentication is
-two of these.
+two of these. In this case you can turn on Single sign On (SSO).
 
 === conditional access
 with conditional accesss, you can choose to require mutlifactor authenticathion
 rules about when an application should be available
 
 === RBAC (Role Base Access Control)
+Who can control the action
 
+Generic roles
+
+owner:: can do anything, including change permisions
+
+Contributor::  can do anything except change permision
+
+Reader:: can read anything but can't change anything
+
+==== Role Assignment
+you have a role you want to give to a specific identity (user, group, service,
+application) at a certain scope
+
+====  Policy
+what the can perform.
