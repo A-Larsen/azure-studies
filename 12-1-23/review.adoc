@@ -312,4 +312,17 @@ something like east US / west US. About 100 miles apart-ish.
 
 == Environments
 Their are, china sets of regions, commercial sets of regions and
-U.S. government sets of regions. Basically there are issolated sets of regions
+U.S. government sets of regions. Basically there are issolated sets of regions.
+Every set of regions has different requirments. Different physicall facilities,
+different logically, different networks, different identities providers, etc.
+
+
+== Services that use pairing
+- storage
+- keyvaut
+
+some services are zone redundant, meaning it spans availability zones. Other
+services are zonal, meaning they will be created with a specific availablity. if
+you just set a number for a public ip's availability zone then it is
+zone-redundant. virtual machines are zonal and there is no option to be zone
+redundant
