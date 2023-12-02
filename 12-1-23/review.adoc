@@ -415,3 +415,15 @@ failure of a data center.
 
 A::
 availability zone
+
+== Loical components (resources)
+
+Azure AD authentication protocols:
+
+- OIDC
+- SAML
+- WS-FED
+- OAUTH2
+
+Authentication can be something I know, have or am.
+
