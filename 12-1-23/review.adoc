@@ -437,6 +437,14 @@ case you can sychronize using azure AD connect.
 Authentication can be something I know, have or am. multifacor authentication is
 two of these. In this case you can turn on Single sign On (SSO).
 
+order of trusts:
+
+1. Azure
+2. Azure AD (ADD)
+3. Root managment groups
+
+managment groups can have RBAC, policy and budget applied to them
+
 === conditional access
 with conditional accesss, you can choose to require mutlifactor authenticathion
 rules about when an application should be available
@@ -458,4 +466,8 @@ application) at a certain scope
 
 ====  Policy
 what the can perform.
+Guardrails
+audit
 initialives:: groups of policies
+
+== Scopes
