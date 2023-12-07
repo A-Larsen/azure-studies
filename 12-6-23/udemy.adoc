@@ -1,0 +1,100 @@
+Azure provides and identity management system based on their popular "Active
+directory".
+
+some protocols for authentication:
+- SAML
+- OpenID
+- WS Federation
+
+Just-in-time (JIT)
+Just-enough-access (JEA)
+
+Their is scalable and elastic expenditure models
+
+operational expenditure model for migrating virtual machines
+
+capital expenditure:: Spending of money on physical infrastructure upfront and
+                      then deducting that expense from you tax bill over time.
+
+Operating expenditure:: Spending money on services or products now and being
+                        billed for them now. You can deduct this expense from
+                        your tax bill in the same year
+
+capital expedniture is an upfront cost, which has a value that reduces over time
+and usually has no recurring cost.
+
+operating expenditure has no upfront cost but has a recurring cost.
+
+Capital expenditure are major purchases a company makes that are designed to be
+used over the long term
+
+Azure Reserved VM instances is an example of capital expenditure
+
+capital expenditure
+- server cost
+- network cost
+- backup and archive cost
+- business continuity
+- disaster recovery
+
+Buisiness continuity:: a business's level of readiness to maintain critical
+functions after an emergency or disruption.
+
+agility:: Cloud agility is the ability to quickly develop, test and launch
+          applications in a cloud-based environment
+
+fault tolerence:: The ability of a system to continue to function in the event
+of a failure of some of its components
+
+hight availabily:: to keep services up and running for long periods of time,
+                   with little downtime, depending on the service in question
+
+
+In Paas you don't have to worry about the underling infastructure. You do nno
+install applications, or manage them.
+
+If you have specialized hardware requirements you should always go for private
+cloud
+
+You should ONLY run script form Azure cloud shell in the Azure portal, or
+through Azure Power shell module.
+
+Powershell 7.0.6, Powershell 7.13, or higher is the recommended versoin of
+Powershell for use  with te Azure AZ PowerShell module
+
+elasticity allows to quickly expand or decresses storage and computing
+resources.
+
+I you need to control the ports that devices on the internet can use to access
+virtual machines, you should create a network security gruop.
+
+You can use Azure network security gruop to filter network traffic between Azure
+resource in a Azure virtual network. A network security gruop contains security
+rules that allow or deny inbound network traffic to, or outbound network traffic
+from, several types of Azure resources. For each rule, you can specify source,
+and destination, port and protocol. Low number prorities will go first. Any
+rules that exist with lower priorities (higher numbers) that have teh same
+attributes as rules with higher priorities aren't processed. source and
+destination is ip addresses. You can't specify multiple IP addresses and IP
+address ranges in network security group created through the classic deployment
+model.
+
+NSG:: You can use and Azure network security group to filter network traffic
+between Azure resources in an Azure virtual network.
+
+Azure AD:: Azure Active Directory, is a cloud-based identity and access
+management service. This service helps your employees access external resources,
+such as Microsoft 365, the Azure portal, and thousand of other SaaS
+applications.
+
+Azure Network gateway:: Azure VPN Gateway connects your on-premises networks
+to Azure through Site-to-Site VPNs in a similar way that you set up and connect
+to a remote office.
+
+Azure Key Vault:: Azure Key Vault is a cloud service that provides a secure
+store for secrets. You can securely store keys, passwords, certificates, and
+other secrests.
+
+Azure Traffic Manager is a DNS-based load balancing solution
+
+public cloud does NOT have limited storage. It IS self-service management

@@ -1,0 +1,57 @@
+== Video
+- tags do not inherit
+- tags are key, value paired. they can be set at any level
+- locks are inherited
+- json, bisop, bash, powershell can be used to configure resources
+- RBAC, publicy, and budget can be set at any level
+
+- if you want to configure a base configuration to a new subscription you can use
+  blue prints
+
+- blueprints have a, don't lock, do not detle and read only lock assignment
+
+- blueprints and locks are at the azure resource managment level
+
+theres two planes in azure the, control plane and then the data plane. The
+control plane does things like create resources. delete resources, modify
+resources. The resources itself has a data plane. The data plane is something
+like create a row in a table, or create a file in a storge account.
+
+Sinse locking only happens at a control plane level, you can do things like
+create and delete blobs if it is locked. Locking only ipacts things Azure
+resource manager controls
+
+Cloud adaption framework. helps you get started in the cloud
+
+== Virtual networks
+Pick a subnet that wont interfer with your other subnets.
+you need at eat one ipv4. It's very comon to see RFC 1918. This is addresses
+that cannot route over the internet.
+
+You cannot just have IPv6. You have to have ipv6 and ipv4.
+
+virtual networks span availability zones.
+
+regions can include multiple availability zones.
+
+for even subnet created you lose 5 ip addresses. Two (first and last
+address) for host range. one for gateway, and another two for DNS
+
+If you have multiple virtual networks, you can peer them so they can talk to
+each other.
+
+You can also connect virtual networks with a site to site VPN. Their is a policy
+connection and route based. Policy has only one connection. route based has
+multiple tunnels. These connections are encrypted.
+
+You can connect to a virtual network though expressRoute which is not over the
+internet. It's a private connetion that can use Border Gateway protocol (BGP).
+
+To control the traffic you can create a network security group (NSG).
+
+Service tag:: is a set of IPs used by a particular Azuore service.
+
+If you have Azure fiewway. you'll have UDR (User Defined Routes).
+
+By default a subnet has private IP addresses, So you can enable a service
+endpoint to get to something on the public internet.

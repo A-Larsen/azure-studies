@@ -1,0 +1,123 @@
+== serverless
+
+charged per CPU cycle and NOT per second.
+
+== Resource group
+
+There no security boundry offered by the resource group for the resources inside
+of them. Any resource can access any other resource in another resource group,
+except if there are other security. Resource group is not offering any
+intra-Azure communication security.
+
+== VM Scale Sets
+- at least two or more virtual machines running at the same time.
+
+- load balancer in from to direct traffic
+
+- can handle up to 100 VMs in a single scale set
+
+- Can be configured to increase that to 1000 VMs in a single scale set
+
+- group on update or fault
+
+- Iaas
+
+== Vm alternatives
+- app services
+- containers
+
+== Containers
+
+Another paradigm for running code in the cloud.
+fastest and easiest to deploy.
+
+Contianers contain everything the app needs to run in a "container image".
+
+- *Azure Container Instance (ACI)*  - single instance, quickest way to deploy a
+  container
+
+- *Azure Container Apps* - easy to use like a web service, with advance
+  features.
+
+- *Azure Kubernetes Service (AKS)* - runs on a cluster of servers,
+  enterprise-grade
+
+== Azure functions
+
+cheap.
+
+can trigger on
+
+- HTTP call
+- Timer
+- Blob creation
+- Mesage queue
+- Dozens of other options
+
+== Networking Services
+- Virtual Networks
+- VPN Gateway
+- VNet Peering
+- ExpressRoute
+
+=== Types of Networking Services
+- Connectivity Services
+- Protection Services
+- Delivery Services
+- Monitoring Services
+
+- *Application Gateway* - a higher-level of load balancer with an optional
+  firewall
+
+- You can connect to virual networks with peering
+
+- With peering you can have one way, or two way traffic
+
+- You can do peering in the same region or do it acrosed regions with global
+  peering
+
+== storage accounts
+
+When connecting to a storage account from the public internet. you'll need an
+access key or authentication, to get into it.
+
+You can issolate a storage account to one of your virtual networks.
+
+- Microsoft storage enpoint is needed for communication between a storage
+  account and a virtual network
+
+- You can disable public and private access and create a private endpoint.
+  You'll need to create a endpoint for each connection you want.
+
+== Other
+Azure Firewall provides network traffic filtering across multiple subscriptions
+and virtual networks.
+
+
+microsoft 365    -> Software as a Service (Saas)
+apps             -> platform as a service (PaaS)
+Virtual Machines -> Infrastructure as a Service (Iaas)
+
+data lake is for large storage
+
+premium storage is faster
+
+You can use Azure copy to copy files across multiple storage accounts, or to and
+from you local machine to a storage account.
+
+If you use AZ copy to copy file from one storage account to another it doesn't
+travel accross the internet.
+
+You can use shared access signature (SAS) to give premmsion to something for a
+short period of time.
+
+It's possible to have a file server and a file share
+
+file shares use SMD protocol
+
+you can mount SMB
+
+SMB has AES 128-GCM encryption
+
+Azure file Sync can be used to move individual files back and forth between
+clouds.
