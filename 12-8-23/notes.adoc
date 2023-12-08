@@ -223,8 +223,9 @@ support requests to be opened.
 
 | Scope                      | included for all Azure customers | trail and non-production environments | production workload environments | Business-critical dependence
 
-| Billing and subscription   | yes                              | yes                                   | yes                              | yes
+| Billing and subscription   
   Managment support
+                             | yes                              | yes                                   | yes                              | yes
 
 | 24/7 self Help             | yes                              | yes                                   | yes                              | yes
 |===
