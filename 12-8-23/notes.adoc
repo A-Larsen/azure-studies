@@ -117,7 +117,16 @@ PaaS -> Azure SQL database
 
 Azure key value CAN NOT analyze security log files from Azure Virtual machines
 
+Azure Key Vaut is a cloud service that provides a secure store for secrets.
+
 An Azure security principal is a security identity that user-created apps,
 services, and automation tools use to access specific Azure resources. A
 security principal should only need to do specific things, unlike a general user
 identity.
+
+Azure key value can store app secrets.
+
+Azure key vault is used to store secrets for SERVER APPLICATIONS.
+
+Azure key vault enforces Transport Layer Security (TLS) protocol to protect dat
+when it's traveling between Azure key vault and clients.
