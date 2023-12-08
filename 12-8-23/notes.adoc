@@ -130,3 +130,25 @@ Azure key vault is used to store secrets for SERVER APPLICATIONS.
 
 Azure key vault enforces Transport Layer Security (TLS) protocol to protect dat
 when it's traveling between Azure key vault and clients.
+
+Azure key Vault automatically generated a new secret after every use.
+
+You can use Azure key value to store certificates.
+
+If you are not using virual machines and all its resources you should shutdown
+the virtual machine
+== Virtual Machines
+
+=== Shuting down a virtual machine VS. Stoping a virtual machine
+When you just stop a virtual machine (or keep it in a deallocated state), you
+will not be charged for the virtual machine compute resources, but you will
+still need to pay for the operating system and the data storage disk attached.
+
+== Other
+Q:: you have an Azure environment that contains multiple Azure virtual machines.
+You plan to implement a solution that enables the client computers on your
+on-premises network to communticate to the Azure virtual machines. You need to
+recommend which Azure Resources must be created for the planned solution. Which
+two Azure resources should you include in the recommendation.
+
+A:: A virtual network gateway, and a gateway subnet.
