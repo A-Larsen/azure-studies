@@ -202,3 +202,20 @@ higher latency.
 You can install VMs once you have a virtual machine installed. you can run
 multiple virtual machines on a hypervisor. You can move a virtaul machine from
 one hypervisor to another hypervisor almost instantaneously.
+
+== Other
+Releasing a feature to all Azure customers is called General Availability
+
+Azure AD is responsible for Authentication
+
+== Azure Support Plans
+
+Basic, Developer, standard and professional direct support planes allow for new
+support requests to be opened.
+
+[%header, cols="1h, 1,1,1,1"]
+|===
+|             | Basic                            | Developer         | Standard         | Professional Direct
+|             | requrest support                 | Purchase support  | Purchase Support | Purchase support
+| PRICE       | Included for all Azure customers | $29 / month       | $100 / month     | 1000 / month
+|===
