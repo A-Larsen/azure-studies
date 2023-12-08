@@ -114,3 +114,10 @@ security center.
 PaaS -> Azure Web app
 PaaS -> Azure logic app
 PaaS -> Azure SQL database
+
+Azure key value CAN NOT analyze security log files from Azure Virtual machines
+
+An Azure security principal is a security identity that user-created apps,
+services, and automation tools use to access specific Azure resources. A
+security principal should only need to do specific things, unlike a general user
+identity.
