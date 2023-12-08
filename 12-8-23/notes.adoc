@@ -161,3 +161,44 @@ client computers you will need a gateway to connect. You also use virtual
 networks along with subnets to connect to virtual machines.
 
 PaaS is about a platform where a developer can design and deploy an application.
+
+Azure Files is an example of PaaS, it is bulit on top of Azure storage. It
+provides fully managed file shares over a protocol called SMB (Server Message
+Block).
+
+Cloud Comuting leverages https://youtu.be/FZR0rG3HKIk?si=7utIjLzzIxDm1YGM[virtualization] to provide
+services to multiple customers simultaneously.
+
+== Virtualization
+
+virtualization:: Is the process of creating a software based or virtaul version
+                 of something (like compute, storage, networking, servers or
+                 applications).
+
+The Hypervisor makes virtualization feasible.
+
+Hypervisor:: A piece of software that runs above the physical server or host.
+
+there is a type 1 and type 2 hypervisor.
+
+=== Type 1 hypervisor (AKA Bare Metal Hypervisors)
+A hypervisor that is install directly ontop of the physical server.
+
+
+Most frequently used.
+low latency
+
+ex.  Microsft Hyper V
+
+== Type 2 hypervisor (AKA Hosted)
+Their is a layer of host OS that sits between the host and the hypervisor.
+
+Not as fequent.
+
+higher latency.
+
+
+=== VMs
+You can install VMs once you have a virtual machine installed. you can run
+multiple virtual machines on a hypervisor. You can move a virtaul machine from
+one hypervisor to another hypervisor almost instantaneously.
