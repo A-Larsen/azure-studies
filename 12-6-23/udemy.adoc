@@ -98,3 +98,12 @@ other secrests.
 Azure Traffic Manager is a DNS-based load balancing solution
 
 public cloud does NOT have limited storage. It IS self-service management
+
+Group policies is part of Azure Active DOmain services and not Azure Active
+Directory
+
+WIndows 10 and 11 only can use Azure Active Directory
+
+Azure App Service and Azure SQL are an example of platform as a service
+
+Azure Storage accounts is IaaS. (THink you need it for virtual machines)

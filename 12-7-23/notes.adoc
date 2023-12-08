@@ -1,0 +1,340 @@
+== Azure Active Domain Service (Azure AD DS)
+
+Azure Active DOMAIN Service (Azure AD DS). enable you to use managed domain
+services -- such as Windows Domain Join, group policy,  lightweight directory
+access protocol (LDAP), and Kerberos authentication -- without having to deploy,
+manage, or patch domain controllers.
+
+Ability to join Azure virtual macines to a managed domain without domain
+controllers
+
+Simple sign-in to apps connected to your managed domain with Azure AD
+credentials.
+
+Lift-and-shift migration of legacy applications from your on-premises
+environment to a managed domin.
+
+Azure AD DS Services is part of Microsoft Entra
+
+You can only have ONE managed domain for a single Azure AD directory.
+
+You can enable Azure AD DS in an Azure Resource Manager virtual network.
+
+A Domain Service managed domain lets you run legacy applications in the cloud
+that can't use modern authentication methods, or wherer you don't want directory
+lookups to always go back to an on-premises AD DS environment.
+
+let useres sign in to services and applications conected to the managed domain
+using their existing credentials.
+
+YOu can also use existing groups and user accoutns to secure access to
+resources.
+
+lift-and-shift:: Moving a copy of an existing application and dat to cloud
+infrastructure with minimal or no redesigning or modification.
+
+Domain Controller:: the server responsible for managing network and identity
+security requests.
+
+managed domain is configure to perform a ONE-WAY synchonization from Microsoft
+Entra ID to provide acces to a central set of users, groups, and credentials.
+They are NOT sychonized back to Microsoft Entra ID.
+
+You can expand a managed domain to have more than one replica set per Microsoft
+Entra tenant. Replica sets can be added to any peered virtual network in any
+Azure region that supports Domain Services.
+
+automatic backups
+
+Managed domain is kept in sync with your Azure AD directory. One way
+
+priced based on the number of object in your directory.
+
+objects:: users plus groups plus domain joined computers.
+
+required machiens to be on the same virtual network as the managed dmoain
+
+required machiens to be on the same virtual network as the managed dmoain
+
+can use virtual machine peering or site-to-site VPNs to extend connectivity.
+
+great for virtual machines deployed in Azure
+
+recommended to have a different subnet so you workload stays seperate form your
+DC's.
+
+classic virutal network support is ending soon (for new domains)
+
+Passwords for users in Domain Services are the same as in your Microsoft Entra
+tenant. Users can use their corporate credentials to domain-join machines, sign
+in interactively or over remote desktop, and authenticate against teh managed
+domain.
+
+Support for NTLM and kerberos authentication.
+
+high availability
+
+your IT team doesn't need to manage, patch, or monitor domain controllers for
+this managed domain.
+
+For hybrid environments that run AD DS on premises, you don't need to manage AD
+replication to the managed domain. User accounts, gorups membershiops, and
+credentials, form your on-premises directory are synchronized to Microsoft Entra
+ID via Microsoft Entra Connect. These user accounts, group memeberships, and
+credentials are automatically available within the managed domain.
+
+You CANNOT invite quest user in your active directory to use Azure AD DS. Their
+passwords are not set up.
+
+You cannot pause an Azure AD DS managed domain. It's always running until you
+remove the managed domain.
+
+== Azure AD Join
+workd over the internet
+
+uses MGM software (Moblie device Managment)
+
+Great for windows 10 devices
+
+If you trying to do a lift-and-shift of windows 10 devices this is a better
+option as apposed to Azure AD DS.
+
+== Other
+You can connet to Azure portal from an Android device
+
+Azure App Service is PaaS
+
+You can move virtual machines from one subscription to another subsciption.
+
+You can have multiple subscriptions.
+
+You can Move virtual macchines to different regions or availability zones.
+
+you cannot copy virtual machines to another resource group, BUT you can move
+them to a different resource group.
+
+You can move virtual machines ot differnt availability zones  
+
+Customers provide application data in SaaS model. NOT  application sofware,
+computer reousreces or data storage.
+
+The best choice for CUSTOM applications is IaaS. In PaaS you HAVE you use the
+platforms that are provided by the cloud service provider.
+
+App Service, Azure Search, and Azure CDN is Platform as a Service (PaaS).
+
+CDMs store cached content on edge servers in point-of-presence (POP) locations.
+Global, distributed points of presence (PoPs) provide fast content delivery
+and protect teh point fo origin form congestion.
+
+== Resource groups
+Resources DO NOT have to belong to the same location as a Resource Gruop.
+
+When you specify a location for a resource group, your specifying where the meta
+data for the group is to be stored.
+
+
+Generally you add resources that share the same lifecycle to the same resource
+group, so you can easilty deploy, update, and delete them as a gruop.
+
+Lifecycle:: extending your investment and minimising the risk taht outdated
+ttechnology can have on you business productivity
+
+microsoft SQL is PaaS
+
+Azure Cosmos DB is an example of serverless.
+
+== Azure Cosmoos DB - Unified AI Database
+
+serverless
+
+fully managed noSQL and relational database for modern app development.
+
+automatic and instant scalability.
+
+automatic management, updates, and patching.
+
+accommodates these operational data models
+- relational
+- document
+- vector
+- key-value
+- graph
+- table
+
+serverless:: a cloud-mantive development model that allows developers to build
+and run applications without having to manage servers.
+
+== Other
+
+Azure virtual Machines, Azure Disk Storage, and Azure Virtual Network are IaaS.
+
+You need storage for azure cloud shell.
+
+The local network gateway is a specific object that represents your on-premises
+location (the site) for routing purposes. You give the site a name by which
+Azure can refer to it, then specify the IP address of the on-premises VPN device
+to which you'll create a connection. You also specify the IP address prefixes
+that will be routed though the VPN gateway to the VPN device.
+
+TO make a virtual machien accesible from the internet over HTTP, you can modify
+the Network Security group (NSG) or modify Azure firewall.
+
+You can use Azure network security group to filter network traffic between Azrue
+resources in an Azure virtual network. A network security group contians
+security rules thyat allow or deny inbound netowrk traffid to, or outbound
+network traffic from, several types of Azure resources. For each rule you can
+specify source, destination, port and portocol. Lower priority goes through
+first.
+
+Azure FIrewall Standard provides L3-L7 filtering and threat intelligence feeds
+directly fro Microsoft Cyber Security. Threat intelligence-base filtering can
+alert and deny traffic from known/to known malicious IP address and domain that
+are updated in real time to protect against new emergin attacks.
+
+Azure firewall Basic is intended for small and medium size (SMB) customers to
+secure their Azure cloud environments.
+
+You can improve composite SLA by adding redundant service to your application.
+
+When you add another service you have one more point of failure, which makes SLA
+worse.
+
+SLA:: Formal agreement between Microsoft and customer to be available for a
+      specific duration
+
+GENERALLY AVAILABLE (GA):: Once azure services are generally available (GA),
+                           then azure services are subject to Service Level
+                           Agreement (SLA).
+
+== Azure Active Directory preview Programs
+Azure active directory provides updates and new features in the form of preview
+programs. Microsoft rolls out previews in phases to give Microsoft and customers
+the opportunity to evaluate and understand the new features before it becomes
+part of teh standard of Azure AD. The phases are as follows:
+
+
+1. *Private preview* -- During this phase we invite a few customers to take part
+   in early access to new concepts and features. This phase does not include
+   formal suport.
+
+2. *Public preview* -- During this phase we allow any customer with the proper
+   Azure AD license to evaluate the new feature. Microsoft Customer Support
+   Services will supply support services during this phase, but normal service
+   level agreements do not apply. For new features exposed in the Azure AD
+   Portal, customer can expect to see information banners in the user interface
+   that draw attention to the new experience available during the preview. By
+   clicking on the information banner customers then opt-in to the preview
+   experience.
+
+3. *Generally available (GA)* -- After the public preview is completed, the
+   feature is open for any licensed customer to use and is supported via all
+   Microsoft support channels. Be aware when a new feature impacts existing
+   functionallity, it might change the way you or your users use the
+   functionality.
+
+NOTE: the portal can be used for all
+
+== Authentication vs Authorization
+Authentication:: is the process of proving you are who you say you are.
+
+Authorization:: is the act of granting an authenticated party permission to do
+                something.
+
+GZRS does ZRS in the primary region and LRS int the secondary region
+
+== Other
+
+You casn use the Access Control (IAM) from teh portal to assign roles to grant
+access to Azure resources.
+
+Azure Active directory lets you set dynamic membership rules. Dynamic membership
+enables the membership of a team to be defined by one or more rules that check
+for certain user attributes in Microsoft Entra ID. Rules can define who is a
+team member but not who is a team owner. Owners will not be able to add or
+remove users as members of the team, since members are defined by dynamic group
+rules. Team clients don't allow member management for the team. Options to add
+members, edit member roles, send and approve join requests, and leave the team
+are all hidden.
+
+If you can sell it (it's an asset) it's probably capEX.
+
+An Azure resourcce can have multiple locks.
+
+If an Azure resource has a Read-only lock, you can add a Delete lock to the
+resource.
+
+An Azure resource inherits locks form its resource group.
+
+locking resource groups  prevents other users in your organization from
+accidently deleting or modifying critical resources, such as Azure
+subscriptions, resource groups, or resources.
+
+When you apply a lock at a parent scope, all resources within that scope inherit
+the same lock.
+
+The Owner and User Access Administrator can create and delete management locks.
+
+To create or delete management locks, you need access to
+_Microsoft.Authorization_ or _Microsoft.Authorization/locks/*_ actions. Only the
+*Owner* and the *User Access Administrator* built-in roles and create and delete
+management locks. You can create a custom role with the required permissions.
+
+You can set locks that prevent either deletions or modifications. In the portal,
+these locks are called *Delete* and *Read-only*. In the command line, these
+locks are called *CanNotDelete* and *ReadOnly*.
+
+NOTE: Delete and CanNotDelete both achive the same objective. As do Read-only
+      and ReadOnly
+
+- *CanNotDelete* - means authorized users can read and modify a resource, but they
+  can't delete it.
+
+- *ReadOnly* - means authorized users can read a resource, but they can't delete
+  or update it. Applying this lock is similar to restricting all authorized
+  users to permissions that ther *Reader* role provides.
+
+== ARM Templates
+ARM templates:: Templates in JSON fromate that describe hwo to deploy a azure
+                resource.
+
+ARM templates are idempotent, which means you can deploy the same template many
+times and get the same resource types in the same state.
+
+ARM templates make sure resources are created in the correct order. When
+possible, Resource Manager deploys resources in parallel so you deployments
+finish faster than serial (in order one at a time) deployments. You deploy the
+template through one command, rather than through multiple imperative commands.
+
+modular
+
+can add Powershell or Bash scripts to your templates.
+
+- *build-in validation* - Your template is deployed only after passing validation.
+  Resource manager checks the template before starting the deployment to make sure
+  the deployment will succeed. You deployment is less likely to stop in a
+  half-finished state.
+
+- *Tracked deployments* - In the Azure portal 
+
+You should check 'Last Sync Time Property' to determine which write operations
+have been replicated to the secondary region.
+
+Defaaut maximum storage account capacity is 5 PiB
+
+run commands from cloud shell!
+
+leasing or purchasing software is a capital expenditure.
+
+Data transfers beteen Azure services is not free.
+
+Premium storage account is faster and beter for low latency scenarios.
+
+Azure Site Recovery help ensure business continuity by keeping business apps and
+workloads running during outages. Site Recovery replicates workloads running on
+physical and virtual machiens (VMs)  form a primary site to a secondary
+location.
+
+Azure Monitor CAN monitor the performance of on-premises computers
+
+Azure Monitor can send alerts to Azure Active directory security groups.

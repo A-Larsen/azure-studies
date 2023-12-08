@@ -1,0 +1,116 @@
+== Azure Trust Center
+can help you with security privacy and compliance
+
+comply:: Act is accourdance to a wish or demand
+
+helps you with Azure Services, Azure DevOps services, and Azure Congnitive
+Services.
+
+== Azure Policy
+works accross multiple subscriptions
+
+Azure Policy helps to enfgore organizational standards to assess compliance
+at-scale. Through its compliance dashboard, it provides an aggregrated view to
+evaluate the overall state of the environment, with the ability to drill down to
+the per-resource, per-policy granularity. It also helps bring your resources  to
+compliance through bulk remediation for existing resources and automatic
+remediation for new resources.
+
+Specifically, some useful governance actions you can enfore with Azure Policy
+include:
+
+- Ensuring your team deploys Aazure resources only to allowed regions
+- Enforcing the consistent application of taxonomic tags
+- Requiring resources to sedn diagnostic logs to a Log Analytics workspace
+
+Which Azure Arc, you can extend your policy-based governance across different
+cloud providers and even to your local datacenters.
+
+All Azure policy data and objects are *encrypted at rest*.
+
+Azure Policy evaluates resources and actions in Azure by comparing the
+properties of thos resources to business rules. These business rules, described
+in JSON format, are known as policy definitions. To simplify management, several
+business rules can be grouped together to form a policy initiative (sometimes
+called a _policySet_). Once your business rules have been formed, the policy
+definition or initiative is assigned to any scope of resources that Azure
+supports, such as management groups, subscriptions, resource gruops, or
+individual resources. The assignment applies to all resources within the
+Resource Manager scope of that assignment. Subscopes can be executed, if
+necessasry. 
+
+Resources are evalutated at specific times during the resource lifecycle, the
+policy assignment lifecycle, and for regular ongoing compliance evaluation. The
+following are the times or events that cause a resource to be evaluated:
+
+- A resource is created or updates in a scope with a policy assignment
+- A policy or initiative is newly assigned to a scope.
+- A policy or initiative already assigned to a scope is update.
+- During the standard compliance evaluation cycle, which occurs every 24 hours
+
+Business rules for handling non-compliant resources vary widely between
+organizations. Examples of how an organization wants the platform to respond to
+a non-compliant resource include:
+
+- Deny the resource change
+- Log the change to the resource
+- Alter the resource before the change
+- Alter teh resource after the change
+- Deploy related compliant resources
+- Block actions on resources
+
+While these effects primaryly affect a resource when the resource is created or
+updated. Azure Policy also supports dealing with existing non-compiant resource
+without needing to alter that resource. 
+
+Resources go through ARM THEN go to the policy layer.
+
+== Encryption at Rest
+Encryption is the secure encoding of data used to protect confidentiality of
+data. The Encryption at Rest design in Azure use symmetric encryption to encrypt
+and decrypt large amounts of data quickly accourding to a simple conceptual
+model:
+
+- A symmetric encryption key is used to encrypt data as it is written to storage
+
+- The same encryption key is used to decrypt that data as it is readed for use
+  in memory
+
+- Data may be partitioned, and different keys may be used for each partition
+
+keys must be stored in a secure location with identity-based access control and
+audit policies. Data encryptio keys whcih are stored outside of secure locations
+are encrypted with a key encryption key kept in a secure location.
+
+Encryption at rest procides data protection for stored data (at rest). Attacks
+against data at-rest include attempts to obtain physical access to the hardware
+on whcih the data is stored, and then compromise the contained data.
+
+Encryption at rest is designed to prevent the attacker from accesing the
+unencrypted data by ensuring the data is encrypted when on disk. If an attacker
+obtains a hard drive with encrypted data bt not the encryption keys, the
+attacker must defeat the encryption to read teh data.
+
+Azure Policy helps organizations to enforce organizational standards and to
+assess compliance at-scale.
+
+== Other
+
+To evaluate whether your company's Azure environment meets regulatory
+requirements you can use the trust portal, Micrsoft Cloud defender, or azure
+security center.
+
+- *Microsft Defender for endpoint*, is an enterprise endpoiint security platform -
+  it incorporates things like next generation antivirus, but also includes
+  behavioral sensors, leverages cloud based security analytics and thread
+  intelligence in order to provide security for windows, macOS, Linux, and iOS.
+
+- *Micrsoft defender for Cloud*, provides "cloud security Posture Management"
+  (CSPM), providing a security analysis of all the resources in your cloud
+  estates, and Cloud Wordload Protection (CWP) which gives specific protectoion
+  for your resources such as VMs, cloud storage, databases, security keys,
+  containers, etc.
+
+PaaS -> Azure Web app
+PaaS -> Azure logic app
+PaaS -> Azure SQL database
