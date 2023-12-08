@@ -215,7 +215,16 @@ support requests to be opened.
 
 [%header, cols="1h, 1,1,1,1"]
 |===
-|             | Basic                            | Developer         | Standard         | Professional Direct
-|             | requrest support                 | Purchase support  | Purchase Support | Purchase support
-| PRICE       | Included for all Azure customers | $29 / month       | $100 / month     | 1000 / month
+|                            | Basic                            | Developer                             | Standard                         | Professional Direct
+
+| Support                    | requrest support                 | Purchase support                      | Purchase Support                 | Purchase support
+
+| Price                      | Included for all Azure customers | $29 / month                           | $100 / month                     | 1000 / month
+
+| Scope                      | included for all Azure customers | trail and non-production environments | production workload environments | Business-critical dependence
+
+| Billing and subscription   | yes                              | yes                                   | yes                              | yes
+  Managment support
+
+| 24/7 self Help             | yes                              | yes                                   | yes                              | yes
 |===
