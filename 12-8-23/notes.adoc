@@ -229,3 +229,39 @@ support requests to be opened.
 
 | 24/7 self Help             | yes                              | yes                                   | yes                              | yes
 |===
+
+== Other
+you billing is based on your usage of Azure resources and is invoiced monthly
+
+Azure Databricks would give the ability to host a big data analysis servie for
+machine learning.
+
+== Azure Databricks
+https://learn.microsoft.com/en-us/azure/databricks/introduction/
+
+Azure databricks is a unified, open analytics platform for building, deploying,
+sharing, and maintainig enterprise-grade analytics, and AI solutions at scale.
+The Databricks Data Intelligence Platform integrates with cloud storage and
+security in your cloud account, and mnages and deploys cloud infrastructe on you
+behalf.
+
+Azure Databricks provides tools that help you connet your sources of data to one
+platform to process, store, share, analyze, model, and monetize datasets with
+solutions from BI to generative AI.
+
+THe Azure Databricks workspace provides a unified interface and tools for most
+data tasks, including:
+
+- data processing workflows scheduling and managment
+
+- Generating dashboards and visualizations
+
+- Managing security, governance, high avialability, and disaster recovery
+
+- Data discovery, annotation, and exploration
+
+- Machine learning (ML) modeling, tracking, amd model serving
+
+-  Generative AI solutions
+
+ended at https://youtu.be/C6RFbx1STUk?si=LrknvTUrmG9SNVvC&t=10725[2:58]
