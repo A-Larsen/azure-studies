@@ -145,10 +145,17 @@ will not be charged for the virtual machine compute resources, but you will
 still need to pay for the operating system and the data storage disk attached.
 
 == Other
-Q:: you have an Azure environment that contains multiple Azure virtual machines.
+Q::
+you have an Azure environment that contains multiple Azure virtual machines.
 You plan to implement a solution that enables the client computers on your
 on-premises network to communticate to the Azure virtual machines. You need to
 recommend which Azure Resources must be created for the planned solution. Which
 two Azure resources should you include in the recommendation.
 
-A:: A virtual network gateway, and a gateway subnet.
+A:: 
+A virtual network gateway, and a gateway subnet.
+
+breakdown:: 
+Notice how it says CLIENT COMPUTERS. Because it is needing to be accessed on
+client computers you will need a gateway to connect. You also use virtual
+networks along with subnets to connect to virtual machines.
