@@ -159,3 +159,5 @@ breakdown::
 Notice how it says CLIENT COMPUTERS. Because it is needing to be accessed on
 client computers you will need a gateway to connect. You also use virtual
 networks along with subnets to connect to virtual machines.
+
+PaaS is about a platform where a developer can design and deploy an application.
