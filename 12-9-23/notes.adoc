@@ -71,5 +71,5 @@ COPY a virtual machine from one subscription to another.
 | 4      | transport    | transmits data                     | TCP, UDP
 | 3      | Network      | decides physical path data takes   | ICMP, IPv4, IPv6
 | 2      | Data Link    | defines the format of data network | ARP, ATM, CDP
-| 1      | A Physical   | physical raw bit stream            | Bluetooth, Etherent 
+| 1      | Physical     | physical raw bit stream            | Bluetooth, Etherent 
 |===
