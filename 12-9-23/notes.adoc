@@ -73,3 +73,60 @@ COPY a virtual machine from one subscription to another.
 | 2      | Data Link    | defines the format of data network | 
 | 1      | Physical     | physical raw bit stream            |  Etherent 
 |===
+
+== Other
+ExpressRoute is in Layer 3 of OSI model
+
+Azure virtual networks provide isolation and segmentation
+
+
+Isolation:: Genernance policies set by the organization.
+
+Segmentation:: The ability to group related assets that are a part of (or
+support) workload operations.
+
+Azure API Management service is a way to create and manage Customer API backend
+services.
+
+resource location and resource usage effect Azure costs.
+
+Use Azure PRcing calculator to extimate the monthly cost.
+
+You can Deallocate or shutdown (NOT STOP) a virtual machine when it is not
+needed.
+
+
+*Azure Reservations* offer discounted prices on certain Azure services. up to 72
+percent compared to pay-as-you-go services.
+
+Azure Policy can help you implement MFA.
+
+Azure policy enable you to define both individual policies and groups of
+relatied policies called initiatives. Azure policy evaluates your resources and
+highlights resources that are not compliant with the policies you created. 
+
+The Azure CLI and Azure powershell can be used to manage Azure environment
+
+Azure Arc simplifies governance and management by delivering a consistent
+multicoud and on-premises management platform.
+
+Azure Advisor evaluates resources and makes recommendations to help improve
+reliability, security, and performance, achieve operation excellence, and reduce
+costs.
+
+Azure Monitor is a platform that collects metric and logging data, such as CPU
+percentages, The data can be used to trigger autoscaling.
+
+Azure Service Health notifies you of Azure related service issues, such as
+region-wide downtime.
+
+Compute and storage are provided by all cloud providers.
+
+agility means that you can deploy and configure cloud-based resources quickly as
+app requirements change.
+
+PaaS doesn't deal with operating systems.
+
+SaaS is software that is centrally hosted and managed for you and your users or
+customers. Usually, one version of the application is used for all customers,
+and it is #licensed through a monthly or annual subscriptoin#.
