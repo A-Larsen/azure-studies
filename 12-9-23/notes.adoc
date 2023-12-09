@@ -66,10 +66,10 @@ COPY a virtual machine from one subscription to another.
 | number | layer name   | explanation                        | example
 
 | 7      | Application  | human interaction                  | DNS, DHCP, HTTPS, 
-| 6      | Presentation | usable format                      | JPEG, MIDI, MPEG, TIFF
-| 5      | Session      | maintains connections              | SQL, ZIP
+| 6      | Presentation | makes data in usable format        | 
+| 5      | Session      | maintains connections              | 
 | 4      | transport    | transmits data                     | TCP, UDP
 | 3      | Network      | decides physical path data takes   | ICMP, IPv4, IPv6
-| 2      | Data Link    | defines the format of data network | ARP, ATM, CDP
-| 1      | Physical     | physical raw bit stream            | Bluetooth, Etherent 
+| 2      | Data Link    | defines the format of data network | 
+| 1      | Physical     | physical raw bit stream            |  Etherent 
 |===
