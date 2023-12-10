@@ -184,6 +184,14 @@ access to data sources and datasets.
 ExpressRoute and Azure VPN Gateway are two services that you can use to connect
 an on-pemises network to Azure.
 
+Azure Applications Insights is a feature of Azure Monitor that allows you to
+monitor running applications, automatically detect performace anomalies, and use
+built-in analytic tools to see what users do on an app.
+
+ended at https://youtu.be/C6RFbx1STUk?si=qNlYj3eQSwWhRhdV&t=12344[3:25]
+
+
 == Need to review
 Microsoft purciew
 Describe Azure management and governance
+Azure Application Insights
