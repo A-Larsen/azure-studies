@@ -130,3 +130,60 @@ PaaS doesn't deal with operating systems.
 SaaS is software that is centrally hosted and managed for you and your users or
 customers. Usually, one version of the application is used for all customers,
 and it is #licensed through a monthly or annual subscriptoin#.
+
+Azure Archive store allows you to store data offline.
+
+You can use NFS, and SMB  to access Azure file shares.
+
+Conditional Access is a feature that Microsoft Entra uses to allow or deny
+access to resources based on identity signals, such as the device being used.
+
+RBAC Is applied to the scope
+
+Agility means that you can deploy and configure cloud-based resources quickly as
+app requirements change.
+
+Subscriptions may be grouped into management groups.
+
+SQL databases and virtual machines make use of availability zones
+
+Virtual machine scale sets are an Azure compute resource that you can use to
+deploy and manage and scale a set of identical virtual machines
+
+service endpoints are used to expose Azure services to a virtual network,
+providing communication between teh two.
+
+network security groups (NSGs) allow you configure inbound and outbound rules
+for virtual networks and virtual machines.
+
+Peering allows you to connect virtual networks together.
+
+The TCO Calculator helps you estimate the cost saving over time of operating a
+solution in Azure compared to operating in an on-premises datacenter.
+
+Azure COst Management allows you to create and manage cost and usage budgets by
+monitoring resource demand trneds, consumption rates, and cost patterns. It also
+allows you to use historical data to generate reports and forecast future usage
+and expenitures.
+
+Resources tags can be used to group billing data and categorize cost by runtime
+environment, such as billing usage for virtual machines running in a production
+environment.
+
+Azure Cost Management + Billing can create and manage budget and generate
+historical reports and forecast future usage.
+
+Azure Reservations offers discounted prices as apposed to pay-as-you-go.
+
+Azure are allows you manage servers across third party cloud platforms and
+on-premises environments
+
+Data Policy in the Microsoft Purview governance portal allows you to manage
+access to data sources and datasets.
+
+ExpressRoute and Azure VPN Gateway are two services that you can use to connect
+an on-pemises network to Azure.
+
+== Need to review
+Microsoft purciew
+Describe Azure management and governance
