@@ -265,3 +265,67 @@ data tasks, including:
 -  Generative AI solutions
 
 ended at https://youtu.be/C6RFbx1STUk?si=LrknvTUrmG9SNVvC&t=10725[2:58]
+
+== Azure Application Insight
+Azure monitor Application insights, a feature of Azure monitor, excels in
+application Performance Management (APM) for live web applications.
+
+Application insights provides many experiences to enchance the performance,
+reliability, and quality of your applications.
+
+Azure Application Insights has that ability to detect and diagnose anomalies in
+web apps.
+
+An extensible application performance management (APM) service for web
+developers on multiple platforms.
+
+=== Investigate
+- *Application dashboard*: An at-a-glance assessment of you application's health
+  and performance.
+
+- *Application map*: A visual overview of application architecture and
+  components' interaction.
+
+- *Live Metrics*: A real-time analytics dashboard for insight into application
+  activity and performance.
+
+- *Translation search*: Trace and diagnose transactions to identify issues and
+  optimize performance.
+
+- *Availability view*: proactively monitor and test the availability and
+  responsiveness of application endpoints.
+
+=== Monitoring
+- *Alters*: Monitor a wide range of aspect of you application and trigger
+  various actions.
+
+- *Metrics*: Dive dep into metrics data to understand usage patterns and trends.
+
+- *Diagnostics settings*: Configure streaming export of platform logs and
+  metrics to the destination of your choice.
+
+- *Logs*: Retrieve, consolidate, and analyze all data collected into Azrue
+  Monitoring Logs
+
+- *Workbooks*: Create interactive reports and dashboards that visualize
+  applications monitoring data.
+
+
+will automatically detect performance anomalies. It includes powerful analytics
+tools to help you diagnose issues and to understand what users actually do with
+your app. It help you continuously improve performance and uability.
+
+== Other
+
+There should be at least two virtual machines to maintain the SLA aggrement of
+99.99% up time.
+
+https://azurecharts.com/sla[SLA]
+
+In MFA you need two or more different types of these identifications:
+
+- Something you know
+- Something you have
+- something you are
+
+There are many ways for a company to implement a hybrid cloud
